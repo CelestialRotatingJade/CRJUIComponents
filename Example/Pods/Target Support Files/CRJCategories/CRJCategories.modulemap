@@ -1,0 +1,6 @@
+framework module CRJCategories {
+  umbrella header "CRJCategories-umbrella.h"
+
+  export *
+  module * { export * }
+}

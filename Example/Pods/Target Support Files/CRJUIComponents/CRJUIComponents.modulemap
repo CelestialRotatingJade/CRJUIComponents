@@ -1,0 +1,6 @@
+framework module CRJUIComponents {
+  umbrella header "CRJUIComponents-umbrella.h"
+
+  export *
+  module * { export * }
+}

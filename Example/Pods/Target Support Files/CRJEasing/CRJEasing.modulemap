@@ -1,0 +1,6 @@
+framework module CRJEasing {
+  umbrella header "CRJEasing-umbrella.h"
+
+  export *
+  module * { export * }
+}

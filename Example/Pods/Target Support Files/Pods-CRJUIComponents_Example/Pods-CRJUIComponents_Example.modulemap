@@ -1,0 +1,6 @@
+framework module Pods_CRJUIComponents_Example {
+  umbrella header "Pods-CRJUIComponents_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

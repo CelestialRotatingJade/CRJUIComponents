@@ -1,0 +1,6 @@
+framework module CRJCommon {
+  umbrella header "CRJCommon-umbrella.h"
+
+  export *
+  module * { export * }
+}
