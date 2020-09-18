@@ -39,4 +39,14 @@
 - (void)selectedEvent {
     
 }
+
++ (void)registerToCollectionView:(UICollectionView *)collectionView reuseIdentifier:(NSString *)reuseIdentifier {
+
+    [collectionView registerClass:[self class] forCellWithReuseIdentifier:reuseIdentifier.length ? reuseIdentifier : NSStringFromClass([self class])];
+}
+
++ (void)registerToCollectionView:(UICollectionView *)collectionView {
+
+    [collectionView registerClass:[self class] forCellWithReuseIdentifier:NSStringFromClass([self class])];
+}
 @end

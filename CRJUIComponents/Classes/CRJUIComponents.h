@@ -7,9 +7,6 @@
 
 #ifndef CRJUIComponents_h
 #define CRJUIComponents_h
-//BaseCell
-#import "CRJBaseCell.h"
-#import "CRJBaseCLVCell.h"
 
 //BaseShowPickerView
 #import "CRJBaseShowPickerView.h"
@@ -36,5 +33,7 @@
 //进度条圆环
 #import "CRJCircleAnimationView.h"
 
+//圆角View
+#import "CRJRoundingCornerView.h"
 
 #endif /* CRJUIComponents_h */

@@ -12,8 +12,6 @@
 
 #import "CRJUIComponents.h"
 #import "CRJBadgeValueView.h"
-#import "CRJBaseCell.h"
-#import "CRJBaseCLVCell.h"
 #import "CRJBaseShowPickerView.h"
 #import "CRJCircleAnimationView.h"
 #import "CRJDateItemPickerView.h"
@@ -24,6 +22,7 @@
 #import "CRJRotateAnimationProtocol.h"
 #import "CRJRotateView.h"
 #import "UIView+CRJRotateAnimationProtocol.h"
+#import "CRJRoundingCornerView.h"
 
 FOUNDATION_EXPORT double CRJUIComponentsVersionNumber;
 FOUNDATION_EXPORT const unsigned char CRJUIComponentsVersionString[];

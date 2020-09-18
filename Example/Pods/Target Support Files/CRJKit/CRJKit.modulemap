@@ -1,0 +1,6 @@
+framework module CRJKit {
+  umbrella header "CRJKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

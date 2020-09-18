@@ -86,4 +86,20 @@
  */
 - (void)selectedEvent;
 
+/**
+ *  Register to collectionView with the reuseIdentifier you specified.
+ *
+ *  @param collectionView  CollectionView.
+ *  @param reuseIdentifier The cell reuseIdentifier.
+ */
++ (void)registerToCollectionView:(UICollectionView *)collectionView reuseIdentifier:(NSString *)reuseIdentifier;
+
+/**
+ *  Register to collectionView with the The class name.
+ *
+ *  @param collectionView  collectionView.
+ */
++ (void)registerToCollectionView:(UICollectionView *)collectionView;
+
+
 @end

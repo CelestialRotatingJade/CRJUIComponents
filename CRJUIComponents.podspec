@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CRJUIComponents'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of CRJUIComponents.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'CRJUIComponents/Classes/**/*'
+#  s.source_files = 'CRJUIComponents/Classes/**/*'
   
   # s.resource_bundles = {
   #   'CRJUIComponents' => ['CRJUIComponents/Assets/*.png']
@@ -41,11 +41,6 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   s.public_header_files = 'CRJUIComponents/**/CRJUIComponents.h'
   s.source_files = 'CRJUIComponents/**/CRJUIComponents.h'
-
-  s.subspec 'BaseCell' do |ss|
-    ss.source_files = 'CRJUIComponents/**/BaseCell/*.{h,m}'
-    ss.dependency 'CRJCommon'
-  end
 
   s.subspec 'BaseShowPickerView' do |ss|
     ss.source_files = 'CRJUIComponents/**/BaseShowPickerView/*.{h,m}'
@@ -86,6 +81,11 @@ TODO: Add long description of the pod here.
     ss.source_files = 'CRJUIComponents/**/CircleAnimationView/*.{h,m}'
     ss.dependency 'CRJEasing'
   end
+  
+  s.subspec 'RoundingCornerView' do |ss|
+    ss.source_files = 'CRJUIComponents/**/RoundingCornerView/*.{h,m}'
+  end
+  
   
   # s.dependency 'CRJCommon'
   # s.dependency 'CRJCategories'

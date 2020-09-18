@@ -4,8 +4,7 @@ platform :ios, '8.0'
 
 target 'CRJUIComponents_Example' do
   pod 'CRJUIComponents', :path => '../'
-#  pod 'CRJEdgeInsetsLabel'
-  
+  pod 'CRJKit/CustomCell'
   target 'CRJUIComponents_Tests' do
     inherit! :search_paths
 
