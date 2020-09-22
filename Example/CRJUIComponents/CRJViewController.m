@@ -8,7 +8,7 @@
 
 #import "CRJViewController.h"
 #import <CRJUIComponents/CRJUIComponents.h>
-
+#import <CRJGeneralTools/CRJDeviceInfo.h>
 @interface CRJViewController ()
 
 @end

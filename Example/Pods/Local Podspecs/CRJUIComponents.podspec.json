@@ -1,6 +1,6 @@
 {
   "name": "CRJUIComponents",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A short description of CRJUIComponents.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/CelestialRotatingJade/CRJUIComponents",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/CelestialRotatingJade/CRJUIComponents.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"
@@ -30,6 +30,9 @@
       "source_files": "CRJUIComponents/**/DateItemPickerView/*.{h,m}",
       "dependencies": {
         "CRJUIComponents/BaseShowPickerView": [
+
+        ],
+        "CRJGeneralTools/DeviceInfo": [
 
         ],
         "CRJCategories": [
@@ -87,6 +90,32 @@
     {
       "name": "RoundingCornerView",
       "source_files": "CRJUIComponents/**/RoundingCornerView/*.{h,m}"
+    },
+    {
+      "name": "RoundingCornerView",
+      "source_files": "CRJUIComponents/**/RoundingCornerView/*.{h,m}"
+    },
+    {
+      "name": "CustomCell",
+      "source_files": "CRJUIComponents/**/CustomCell/*.{h,m}"
+    },
+    {
+      "name": "CustomControllers",
+      "source_files": "CRJUIComponents/**/CustomControllers/*.{h,m}",
+      "dependencies": {
+        "CRJGeneralTools/DeviceInfo": [
+
+        ],
+        "CRJCommon": [
+
+        ],
+        "CRJCategories": [
+
+        ],
+        "FDFullscreenPopGesture": [
+
+        ]
+      }
     }
   ]
 }

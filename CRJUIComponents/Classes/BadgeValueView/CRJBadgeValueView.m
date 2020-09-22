@@ -42,8 +42,8 @@
     
     // 背景色
     self.backgroundColor     = self.badgeColor;
-    self.crj_width               = self.fixedHeight;
-    self.crj_height              = self.fixedHeight;
+    self.width               = self.fixedHeight;
+    self.height              = self.fixedHeight;
     self.layer.cornerRadius  = self.fixedHeight / 2.f;
     self.layer.masksToBounds = YES;
     
@@ -79,17 +79,17 @@
 
     
     // 更新尺寸
-    if (self.label.crj_width + self.sensitiveWidth > self.crj_width) {
+    if (self.label.width + self.sensitiveWidth > self.width) {
         
-        self.crj_width = self.label.crj_width + self.sensitiveWidth;
+        self.width = self.label.width + self.sensitiveWidth;
         
     } else {
         
-        self.crj_width = self.fixedHeight;
+        self.width = self.fixedHeight;
     }
     
     // 更新文本尺寸
-    self.label.center = self.crj_middlePoint;
+    self.label.center = self.middlePoint;
     
     
 
@@ -97,28 +97,28 @@
     CGFloat offset = self.fixedHeight / 2.f;
     switch (self.position) {
         case CRJBadgePositionCenterLeft:
-            self.crj_left = -offset;
-            self.crj_centerY = self.contentView.crj_middleY;
+            self.left = -offset;
+            self.centerY = self.contentView.middleY;
             break;
         case CRJBadgePositionCenterRight:
-            self.crj_left = self.contentView.crj_width - offset;
-            self.crj_centerY = self.contentView.crj_middleY;
+            self.left = self.contentView.width - offset;
+            self.centerY = self.contentView.middleY;
             break;
         case CRJBadgePositionTopLeft:
-            self.crj_left = -offset;
-            self.crj_y    = -offset;
+            self.left = -offset;
+            self.y    = -offset;
             break;
         case CRJBadgePositionTopRight:
-            self.crj_top  = -offset;
-            self.crj_left = self.contentView.crj_width - offset;
+            self.top  = -offset;
+            self.left = self.contentView.width - offset;
             break;
         case CRJBadgePositionBottomLeft:
-            self.crj_left = -offset;
-            self.crj_top = self.contentView.crj_height - offset;
+            self.left = -offset;
+            self.top = self.contentView.height - offset;
             break;
         case CRJBadgePositionBottomRight:
-            self.crj_left = self.contentView.crj_width - offset;
-            self.crj_top = self.contentView.crj_height - offset;
+            self.left = self.contentView.width - offset;
+            self.top = self.contentView.height - offset;
             break;
         default:
             break;

@@ -7,7 +7,9 @@
 
 #import "CRJBaseShowPickerView.h"
 #import <CRJCategories/CRJCategories.h>
+#import <CRJGeneralTools/CRJDeviceInfo.h>
 #import <CRJCommon/CRJCommon.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CRJDateItemPickerView : CRJBaseShowPickerView

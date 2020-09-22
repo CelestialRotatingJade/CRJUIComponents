@@ -1,0 +1,6 @@
+framework module CRJGeneralTools {
+  umbrella header "CRJGeneralTools-umbrella.h"
+
+  export *
+  module * { export * }
+}

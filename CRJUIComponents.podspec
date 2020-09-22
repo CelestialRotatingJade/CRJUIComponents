@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CRJUIComponents'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of CRJUIComponents.'
 
 # This description is used to generate tags and improve search results.
@@ -49,6 +49,7 @@ TODO: Add long description of the pod here.
   s.subspec 'DateItemPickerView' do |ss|
     ss.source_files = 'CRJUIComponents/**/DateItemPickerView/*.{h,m}'
     ss.dependency 'CRJUIComponents/BaseShowPickerView'
+    ss.dependency 'CRJGeneralTools/DeviceInfo'
     ss.dependency 'CRJCategories'
     ss.dependency 'CRJCommon'
   end
@@ -84,6 +85,22 @@ TODO: Add long description of the pod here.
   
   s.subspec 'RoundingCornerView' do |ss|
     ss.source_files = 'CRJUIComponents/**/RoundingCornerView/*.{h,m}'
+  end
+  
+  s.subspec 'RoundingCornerView' do |ss|
+    ss.source_files = 'CRJUIComponents/**/RoundingCornerView/*.{h,m}'
+  end
+  
+  s.subspec 'CustomCell' do |ss|
+    ss.source_files = 'CRJUIComponents/**/CustomCell/*.{h,m}'
+  end
+  
+  s.subspec 'CustomControllers' do |ss|
+    ss.source_files = 'CRJUIComponents/**/CustomControllers/*.{h,m}'
+    ss.dependency 'CRJGeneralTools/DeviceInfo'
+    ss.dependency 'CRJCommon'
+    ss.dependency 'CRJCategories'
+    ss.dependency 'FDFullscreenPopGesture'
   end
   
   

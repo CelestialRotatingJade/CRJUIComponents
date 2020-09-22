@@ -10,11 +10,8 @@
 #endif
 #endif
 
-#import "CRJCellDataAdapter.h"
-#import "CRJCellHFDataAdapter.h"
 #import "CRJCommon.h"
 #import "CRJCommonlyDefine.h"
-#import "CRJDeviceInfo.h"
 
 FOUNDATION_EXPORT double CRJCommonVersionNumber;
 FOUNDATION_EXPORT const unsigned char CRJCommonVersionString[];

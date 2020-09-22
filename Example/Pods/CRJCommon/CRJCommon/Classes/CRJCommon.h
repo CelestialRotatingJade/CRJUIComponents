@@ -9,8 +9,4 @@
 #ifndef CRJCommon_h
 #define CRJCommon_h
 #import "CRJCommonlyDefine.h"
-#import "CRJDeviceInfo.h"
-#import "CRJCellDataAdapter.h"
-#import "CRJCellHFDataAdapter.h"
-
 #endif /* CRJCommon_h */

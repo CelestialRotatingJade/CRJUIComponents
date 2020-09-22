@@ -39,14 +39,14 @@
         
         if (self.direction == CRJIconAtLeft) {
 
-            _iconView.crj_left    = insets.left;
-            _iconView.crj_centerY = self.crj_middleY;
+            _iconView.left    = insets.left;
+            _iconView.centerY = self.middleY;
             insets = UIEdgeInsetsMake(insets.top, insets.left + _gap + _iconView.frame.size.width, insets.bottom, insets.right);
             
         } else if (self.direction == CRJIconAtRight) {
         
-            _iconView.crj_right   = self.crj_width - insets.right;
-            _iconView.crj_centerY = self.crj_middleY;
+            _iconView.right   = self.width - insets.right;
+            _iconView.centerY = self.middleY;
             insets = UIEdgeInsetsMake(insets.top, insets.left, insets.bottom, insets.right  + _gap + _iconView.frame.size.width);
         }
     }

@@ -200,16 +200,18 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CRJCategories/CRJCategories.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CRJCommon/CRJCommon.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CRJEasing/CRJEasing.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CRJKit/CRJKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CRJGeneralTools/CRJGeneralTools.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CRJUIComponents/CRJUIComponents.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CRJCategories/CRJCategories.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CRJCommon/CRJCommon.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CRJEasing/CRJEasing.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CRJKit/CRJKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CRJGeneralTools/CRJGeneralTools.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CRJUIComponents/CRJUIComponents.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

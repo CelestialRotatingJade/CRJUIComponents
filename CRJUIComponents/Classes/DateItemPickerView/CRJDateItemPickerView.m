@@ -17,17 +17,17 @@
     
     // 确定按钮
     UIButton *button       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
-    button.crj_right           = CRJScreenSize().width;
-    [button crj_setNormalTitle:@"确定"];
+    button.right           = CRJScreenSize().width;
+    [button setNormalTitle:@"确定"];
     button.titleLabel.font = [UIFont systemFontOfSize:13.f];
-    [button crj_addTarget:self action:@selector(buttonEvent)];
+    [button addTarget:self action:@selector(buttonEvent)];
     [topWhiteView addSubview:button];
     
-    [button crj_titleLabelHorizontalAlignment:UIControlContentHorizontalAlignmentRight
+    [button titleLabelHorizontalAlignment:UIControlContentHorizontalAlignmentRight
                         verticalAlignment:UIControlContentVerticalAlignmentCenter
                         contentEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 12.f)];
     
-    [button crj_titleLabelColorWithNormalStateColor:[UIColor blackColor]
+    [button titleLabelColorWithNormalStateColor:[UIColor blackColor]
                           highlightedStateColor:[[UIColor blackColor] colorWithAlphaComponent:0.5f]
                              disabledStateColor:nil];
     
@@ -45,7 +45,7 @@
         label.userInteractionEnabled = NO;
         [label sizeToFit];
         
-        label.center = topWhiteView.crj_middlePoint;
+        label.center = topWhiteView.middlePoint;
         [topWhiteView addSubview:label];
     }
     
