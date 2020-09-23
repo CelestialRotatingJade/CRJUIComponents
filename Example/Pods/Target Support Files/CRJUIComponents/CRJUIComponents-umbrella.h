@@ -25,6 +25,7 @@
 #import "CRJBaseCollectionViewScreen.h"
 #import "CRJBaseTabViewScreen.h"
 #import "CRJBaseViewScreen.h"
+#import "CRJCustomControllers.h"
 #import "CRJDateItemPickerView.h"
 #import "CRJEdgeInsetsLabel.h"
 #import "CRJIconEdgeInsetsLabel.h"

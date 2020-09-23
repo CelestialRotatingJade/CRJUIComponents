@@ -29,41 +29,41 @@ PODS:
   - CRJCommon (0.1.3)
   - CRJEasing (0.1.0)
   - CRJGeneralTools/DeviceInfo (0.1.2)
-  - CRJUIComponents (0.1.2):
-    - CRJUIComponents/BadgeValueView (= 0.1.2)
-    - CRJUIComponents/BaseShowPickerView (= 0.1.2)
-    - CRJUIComponents/CircleAnimationView (= 0.1.2)
-    - CRJUIComponents/CustomCell (= 0.1.2)
-    - CRJUIComponents/CustomControllers (= 0.1.2)
-    - CRJUIComponents/DateItemPickerView (= 0.1.2)
-    - CRJUIComponents/EdgeInsetsLabel (= 0.1.2)
-    - CRJUIComponents/InfiniteRotationView (= 0.1.2)
-    - CRJUIComponents/PlaceholderImageView (= 0.1.2)
-    - CRJUIComponents/RotateView (= 0.1.2)
-    - CRJUIComponents/RoundingCornerView (= 0.1.2)
-  - CRJUIComponents/BadgeValueView (0.1.2):
+  - CRJUIComponents (0.1.3):
+    - CRJUIComponents/BadgeValueView (= 0.1.3)
+    - CRJUIComponents/BaseShowPickerView (= 0.1.3)
+    - CRJUIComponents/CircleAnimationView (= 0.1.3)
+    - CRJUIComponents/CustomCell (= 0.1.3)
+    - CRJUIComponents/CustomControllers (= 0.1.3)
+    - CRJUIComponents/DateItemPickerView (= 0.1.3)
+    - CRJUIComponents/EdgeInsetsLabel (= 0.1.3)
+    - CRJUIComponents/InfiniteRotationView (= 0.1.3)
+    - CRJUIComponents/PlaceholderImageView (= 0.1.3)
+    - CRJUIComponents/RotateView (= 0.1.3)
+    - CRJUIComponents/RoundingCornerView (= 0.1.3)
+  - CRJUIComponents/BadgeValueView (0.1.3):
     - CRJCategories
-  - CRJUIComponents/BaseShowPickerView (0.1.2)
-  - CRJUIComponents/CircleAnimationView (0.1.2):
+  - CRJUIComponents/BaseShowPickerView (0.1.3)
+  - CRJUIComponents/CircleAnimationView (0.1.3):
     - CRJEasing
-  - CRJUIComponents/CustomCell (0.1.2)
-  - CRJUIComponents/CustomControllers (0.1.2):
+  - CRJUIComponents/CustomCell (0.1.3)
+  - CRJUIComponents/CustomControllers (0.1.3):
     - CRJCategories
     - CRJCommon
     - CRJGeneralTools/DeviceInfo
     - FDFullscreenPopGesture
-  - CRJUIComponents/DateItemPickerView (0.1.2):
+  - CRJUIComponents/DateItemPickerView (0.1.3):
     - CRJCategories
     - CRJCommon
     - CRJGeneralTools/DeviceInfo
     - CRJUIComponents/BaseShowPickerView
-  - CRJUIComponents/EdgeInsetsLabel (0.1.2):
+  - CRJUIComponents/EdgeInsetsLabel (0.1.3):
     - CRJCategories
-  - CRJUIComponents/InfiniteRotationView (0.1.2)
-  - CRJUIComponents/PlaceholderImageView (0.1.2):
+  - CRJUIComponents/InfiniteRotationView (0.1.3)
+  - CRJUIComponents/PlaceholderImageView (0.1.3):
     - SDWebImage
-  - CRJUIComponents/RotateView (0.1.2)
-  - CRJUIComponents/RoundingCornerView (0.1.2)
+  - CRJUIComponents/RotateView (0.1.3)
+  - CRJUIComponents/RoundingCornerView (0.1.3)
   - FDFullscreenPopGesture (1.1)
   - SDWebImage (5.9.1):
     - SDWebImage/Core (= 5.9.1)
@@ -90,7 +90,7 @@ SPEC CHECKSUMS:
   CRJCommon: bf4e373a509cf5db99a44ff0d382ff596e4b54b4
   CRJEasing: 251e1a33c57659de9afba68619a760858c90fa5c
   CRJGeneralTools: 2ce5983be5ebed7191fb43b4000b6fb041e7777e
-  CRJUIComponents: 59f76d72896889e2b47f5a2e8337b74a5d2f59f1
+  CRJUIComponents: b310b12c894316628d61f310e4851a6b515bc711
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
 
