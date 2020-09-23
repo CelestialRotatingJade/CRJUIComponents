@@ -42,53 +42,18 @@ TODO: Add long description of the pod here.
   s.public_header_files = 'CRJUIComponents/**/CRJUIComponents.h'
   s.source_files = 'CRJUIComponents/**/CRJUIComponents.h'
 
-  s.subspec 'BaseShowPickerView' do |ss|
-    ss.source_files = 'CRJUIComponents/**/BaseShowPickerView/*.{h,m}'
-  end
-
-  s.subspec 'DateItemPickerView' do |ss|
-    ss.source_files = 'CRJUIComponents/**/DateItemPickerView/*.{h,m}'
-    ss.dependency 'CRJUIComponents/BaseShowPickerView'
-    ss.dependency 'CRJGeneralTools/DeviceInfo'
-    ss.dependency 'CRJCategories'
-    ss.dependency 'CRJCommon'
-  end
-
-  s.subspec 'PlaceholderImageView' do |ss|
-    ss.source_files = 'CRJUIComponents/**/PlaceholderImageView/*.{h,m}'
-    ss.dependency 'SDWebImage'
-  end
-  
-  s.subspec 'EdgeInsetsLabel' do |ss|
-    ss.source_files = 'CRJUIComponents/**/EdgeInsetsLabel/*.{h,m}'
-    ss.dependency 'CRJCategories'
-  end
-  
-  s.subspec 'RotateView' do |ss|
-    ss.source_files = 'CRJUIComponents/**/RotateView/*.{h,m}'
-#    ss.dependency 'CRJCategories'
-  end
-  
-  s.subspec 'InfiniteRotationView' do |ss|
-    ss.source_files = 'CRJUIComponents/**/InfiniteRotationView/*.{h,m}'
-  end
-  
   s.subspec 'BadgeValueView' do |ss|
     ss.source_files = 'CRJUIComponents/**/BadgeValueView/*.{h,m}'
     ss.dependency 'CRJCategories'
   end
-  
+
+  s.subspec 'BaseShowPickerView' do |ss|
+    ss.source_files = 'CRJUIComponents/**/BaseShowPickerView/*.{h,m}'
+  end
+
   s.subspec 'CircleAnimationView' do |ss|
     ss.source_files = 'CRJUIComponents/**/CircleAnimationView/*.{h,m}'
     ss.dependency 'CRJEasing'
-  end
-  
-  s.subspec 'RoundingCornerView' do |ss|
-    ss.source_files = 'CRJUIComponents/**/RoundingCornerView/*.{h,m}'
-  end
-  
-  s.subspec 'RoundingCornerView' do |ss|
-    ss.source_files = 'CRJUIComponents/**/RoundingCornerView/*.{h,m}'
   end
   
   s.subspec 'CustomCell' do |ss|
@@ -103,7 +68,37 @@ TODO: Add long description of the pod here.
     ss.dependency 'FDFullscreenPopGesture'
   end
   
+  s.subspec 'DateItemPickerView' do |ss|
+    ss.source_files = 'CRJUIComponents/**/DateItemPickerView/*.{h,m}'
+    ss.dependency 'CRJUIComponents/BaseShowPickerView'
+    ss.dependency 'CRJGeneralTools/DeviceInfo'
+    ss.dependency 'CRJCategories'
+    ss.dependency 'CRJCommon'
+  end
+
+  s.subspec 'EdgeInsetsLabel' do |ss|
+    ss.source_files = 'CRJUIComponents/**/EdgeInsetsLabel/*.{h,m}'
+    ss.dependency 'CRJCategories'
+  end
   
+  s.subspec 'InfiniteRotationView' do |ss|
+    ss.source_files = 'CRJUIComponents/**/InfiniteRotationView/*.{h,m}'
+  end
+  
+  s.subspec 'PlaceholderImageView' do |ss|
+    ss.source_files = 'CRJUIComponents/**/PlaceholderImageView/*.{h,m}'
+    ss.dependency 'SDWebImage'
+  end
+  
+  s.subspec 'RotateView' do |ss|
+    ss.source_files = 'CRJUIComponents/**/RotateView/*.{h,m}'
+#    ss.dependency 'CRJCategories'
+  end
+  
+  s.subspec 'RoundingCornerView' do |ss|
+    ss.source_files = 'CRJUIComponents/**/RoundingCornerView/*.{h,m}'
+  end
+
   # s.dependency 'CRJCommon'
   # s.dependency 'CRJCategories'
   # s.dependency 'CRJUIButton'

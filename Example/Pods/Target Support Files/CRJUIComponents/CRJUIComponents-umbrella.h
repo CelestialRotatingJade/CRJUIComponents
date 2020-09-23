@@ -19,6 +19,7 @@
 #import "CRJBaseHeaderFooterView.h"
 #import "CRJCellDataAdapter.h"
 #import "CRJCellHFDataAdapter.h"
+#import "CRJCustomCell.h"
 #import "CRJAppBar.h"
 #import "CRJAppearanceConfigure.h"
 #import "CRJBaseCollectionViewScreen.h"
