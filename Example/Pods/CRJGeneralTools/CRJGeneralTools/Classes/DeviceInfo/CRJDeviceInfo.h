@@ -59,6 +59,15 @@ typedef enum : NSUInteger {
 @property (class, nonatomic, readonly) CRJDeviceType deviceType;
 
 /**
+ 是否是竖屏
+ */
+@property (class, nonatomic, readonly) BOOL isPortrait;
+
+/**
+ window.safeAreaInsets
+*/
+@property (class, nonatomic, readonly) UIEdgeInsets safeAreaInsets;
+/**
  是否是刘海屏幕
  */
 @property (class, nonatomic, readonly) BOOL isFringeScreen;

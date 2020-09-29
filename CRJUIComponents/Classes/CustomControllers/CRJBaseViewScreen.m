@@ -43,8 +43,13 @@
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     self.contentView.frame = self.view.bounds;
-    
-    CGFloat safeAreaTop = CRJDeviceInfo.isFringeScreen ? CRJDeviceInfo.fringeScreenTopSafeHeight : 20;
+    BOOL IsPortrait = CRJDeviceInfo.isPortrait;//是否是竖屏
+    CGFloat safeAreaTop = 0;
+    if (IsPortrait) {
+        safeAreaTop = CRJDeviceInfo.safeAreaInsets.top;
+    } else {
+        safeAreaTop = 0;
+    }
     CGFloat appBarH = safeAreaTop + [CRJAppearanceConfigure sharedInstance].navigationBarHeight;
     self.appBar.frame = CGRectMake(0, 0, self.view.width, appBarH);
 }

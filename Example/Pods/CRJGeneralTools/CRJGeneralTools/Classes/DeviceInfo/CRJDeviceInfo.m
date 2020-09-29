@@ -14,14 +14,29 @@
 #import <mach/mach.h>
 
 @implementation CRJDeviceInfo
+
++ (CGSize)screenSize {
+    static CGSize size;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        size = [UIScreen mainScreen].bounds.size;
+        if (size.height < size.width) {
+            CGFloat tmp = size.height;
+            size.height = size.width;
+            size.width = tmp;
+        }
+    });
+    return size;
+}
+
 + (CRJDeviceType)deviceType {
     
     static CRJDeviceType type;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        CGFloat width  = [UIScreen mainScreen].bounds.size.width;
-        CGFloat height = [UIScreen mainScreen].bounds.size.height;
+        CGFloat width  = [CRJDeviceInfo screenSize].width;
+        CGFloat height = [CRJDeviceInfo screenSize].height;
         
         if (width == 320.f && height == 480.f) {
             
@@ -58,19 +73,33 @@
     return type;
 }
 
++ (BOOL)isPortrait {
+    return [UIScreen mainScreen].bounds.size.width < [UIScreen mainScreen].bounds.size.height;
+}
+
++ (UIEdgeInsets)safeAreaInsets {
+    UIEdgeInsets areaInsets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
+        areaInsets = window.safeAreaInsets;
+        #ifdef DEBUG
+            NSLog(@"window.safeAreaInsets %@",NSStringFromUIEdgeInsets(window.safeAreaInsets));
+        #else
+            
+        #endif
+    }
+    return areaInsets;
+}
+
 + (BOOL)isFringeScreen {
     
     static BOOL isFringeScreen = NO;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-//        if (CRJDeviceInfo.deviceType == CRJDevice_375x812 ||
-//            CRJDeviceInfo.deviceType == CRJDevice_414x896) {
-//            isFringeScreen = YES;
-//        }
-        if (@available(iOS 11.0, *)) {
-            UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
-            isFringeScreen = window.safeAreaInsets.bottom > 0;
+        if (CRJDeviceInfo.deviceType == CRJDevice_375x812 ||
+            CRJDeviceInfo.deviceType == CRJDevice_414x896) {
+            isFringeScreen = YES;
         }
     });
     
@@ -83,13 +112,9 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-//        if (CRJDeviceInfo.deviceType == CRJDevice_375x812 ||
-//            CRJDeviceInfo.deviceType == CRJDevice_414x896) {
-//            height = 44.f;
-//        }
-        if (@available(iOS 11.0, *)) {
-            UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
-            height = window.safeAreaInsets.top;
+        if (CRJDeviceInfo.deviceType == CRJDevice_375x812 ||
+            CRJDeviceInfo.deviceType == CRJDevice_414x896) {
+            height = 44.f;
         }
     });
     
@@ -102,13 +127,9 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-//        if (CRJDeviceInfo.deviceType == CRJDevice_375x812 ||
-//            CRJDeviceInfo.deviceType == CRJDevice_414x896) {
-//            height = 34.f;
-//        }
-        if (@available(iOS 11.0, *)) {
-            UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
-            height = window.safeAreaInsets.bottom;
+        if (CRJDeviceInfo.deviceType == CRJDevice_375x812 ||
+            CRJDeviceInfo.deviceType == CRJDevice_414x896) {
+            height = 34.f;
         }
     });
     
