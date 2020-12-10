@@ -12,12 +12,12 @@
 - (void)buildViewsInContentView:(UIView *)contentView {
     
     // 顶部白色的view
-    UIView *topWhiteView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CRJScreenSize().width, 40.f)];
+    UIView *topWhiteView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, contentView.width, 40.f)];
     [contentView addSubview:topWhiteView];
     
     // 确定按钮
     UIButton *button       = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
-    button.right           = CRJScreenSize().width;
+    button.right           = contentView.width;
     [button setNormalTitle:@"确定"];
     button.titleLabel.font = [UIFont systemFontOfSize:13.f];
     [button addTarget:self action:@selector(buttonEvent)];
@@ -32,7 +32,7 @@
                              disabledStateColor:nil];
     
     // 顶部线条
-    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CRJScreenSize().width, 0.5f)];
+    UIView *line         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, contentView.width, 0.5f)];
     line.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [topWhiteView addSubview:line];
     
@@ -49,7 +49,7 @@
         [topWhiteView addSubview:label];
     }
     
-    UIDatePicker *picker  = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 40.f, CRJScreenSize().width, 180.f)];
+    UIDatePicker *picker  = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 40.f, contentView.width, 180.f)];
     picker.datePickerMode = UIDatePickerModeDate;
     [picker addTarget:self action:@selector(datePickerEvent:) forControlEvents:UIControlEventValueChanged];
     

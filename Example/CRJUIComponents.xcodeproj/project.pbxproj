@@ -30,6 +30,10 @@
 		D7110D1A2582124D0068B66B /* TNTComponentsScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D192582124D0068B66B /* TNTComponentsScreen.m */; };
 		D7110D1F258212640068B66B /* TNTSettingScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D1E258212640068B66B /* TNTSettingScreen.m */; };
 		D7110D2C258218190068B66B /* TNTComponentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D2B258218190068B66B /* TNTComponentCell.m */; };
+		D7110D40258224560068B66B /* TNTItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D3F258224560068B66B /* TNTItemStyle.m */; };
+		D7110D47258226930068B66B /* TNTDateItemPickerViewScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D46258226930068B66B /* TNTDateItemPickerViewScreen.m */; };
+		D7110D5C258228BE0068B66B /* SingleChoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D56258228BD0068B66B /* SingleChoiceCell.m */; };
+		D7110D5D258228BE0068B66B /* SingleChoicePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D59258228BE0068B66B /* SingleChoicePickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,14 @@
 		D7110D26258215090068B66B /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		D7110D2A258218190068B66B /* TNTComponentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNTComponentCell.h; sourceTree = "<group>"; };
 		D7110D2B258218190068B66B /* TNTComponentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNTComponentCell.m; sourceTree = "<group>"; };
+		D7110D3E258224560068B66B /* TNTItemStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNTItemStyle.h; sourceTree = "<group>"; };
+		D7110D3F258224560068B66B /* TNTItemStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNTItemStyle.m; sourceTree = "<group>"; };
+		D7110D45258226930068B66B /* TNTDateItemPickerViewScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNTDateItemPickerViewScreen.h; sourceTree = "<group>"; };
+		D7110D46258226930068B66B /* TNTDateItemPickerViewScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNTDateItemPickerViewScreen.m; sourceTree = "<group>"; };
+		D7110D56258228BD0068B66B /* SingleChoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleChoiceCell.m; sourceTree = "<group>"; };
+		D7110D58258228BE0068B66B /* SingleChoicePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleChoicePickerView.h; sourceTree = "<group>"; };
+		D7110D59258228BE0068B66B /* SingleChoicePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleChoicePickerView.m; sourceTree = "<group>"; };
+		D7110D5A258228BE0068B66B /* SingleChoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleChoiceCell.h; sourceTree = "<group>"; };
 		ECA767EFECEC410B8C136287 /* Pods-CRJUIComponents_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRJUIComponents_Example.release.xcconfig"; path = "Target Support Files/Pods-CRJUIComponents_Example/Pods-CRJUIComponents_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F70CCC9E0A91EED1314A0D39 /* Pods_CRJUIComponents_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRJUIComponents_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -249,9 +261,13 @@
 		D7110D16258211F50068B66B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D7110D4D258228AB0068B66B /* SingleChoicePickerView */,
+				D7110D3D258224430068B66B /* Model */,
 				D7110D29258217F40068B66B /* View */,
 				D7110D182582124D0068B66B /* TNTComponentsScreen.h */,
 				D7110D192582124D0068B66B /* TNTComponentsScreen.m */,
+				D7110D45258226930068B66B /* TNTDateItemPickerViewScreen.h */,
+				D7110D46258226930068B66B /* TNTDateItemPickerViewScreen.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -272,6 +288,26 @@
 				D7110D2B258218190068B66B /* TNTComponentCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D7110D3D258224430068B66B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D7110D3E258224560068B66B /* TNTItemStyle.h */,
+				D7110D3F258224560068B66B /* TNTItemStyle.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D7110D4D258228AB0068B66B /* SingleChoicePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				D7110D5A258228BE0068B66B /* SingleChoiceCell.h */,
+				D7110D56258228BD0068B66B /* SingleChoiceCell.m */,
+				D7110D58258228BE0068B66B /* SingleChoicePickerView.h */,
+				D7110D59258228BE0068B66B /* SingleChoicePickerView.m */,
+			);
+			path = SingleChoicePickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,8 +499,12 @@
 				D7110D092582117D0068B66B /* TNTNavigationController.m in Sources */,
 				D7110D1A2582124D0068B66B /* TNTComponentsScreen.m in Sources */,
 				D7110D11258211DC0068B66B /* TNTTabBarController.m in Sources */,
+				D7110D47258226930068B66B /* TNTDateItemPickerViewScreen.m in Sources */,
+				D7110D40258224560068B66B /* TNTItemStyle.m in Sources */,
 				D7110D2C258218190068B66B /* TNTComponentCell.m in Sources */,
 				D7110D1F258212640068B66B /* TNTSettingScreen.m in Sources */,
+				D7110D5C258228BE0068B66B /* SingleChoiceCell.m in Sources */,
+				D7110D5D258228BE0068B66B /* SingleChoicePickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
