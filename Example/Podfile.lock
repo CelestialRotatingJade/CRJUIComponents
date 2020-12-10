@@ -29,48 +29,50 @@ PODS:
   - CRJCommon (0.1.3)
   - CRJEasing (0.1.0)
   - CRJGeneralTools/DeviceInfo (0.1.4)
-  - CRJUIComponents (0.1.3):
-    - CRJUIComponents/BadgeValueView (= 0.1.3)
-    - CRJUIComponents/BaseShowPickerView (= 0.1.3)
-    - CRJUIComponents/CircleAnimationView (= 0.1.3)
-    - CRJUIComponents/CustomCell (= 0.1.3)
-    - CRJUIComponents/CustomControllers (= 0.1.3)
-    - CRJUIComponents/DateItemPickerView (= 0.1.3)
-    - CRJUIComponents/EdgeInsetsLabel (= 0.1.3)
-    - CRJUIComponents/InfiniteRotationView (= 0.1.3)
-    - CRJUIComponents/PlaceholderImageView (= 0.1.3)
-    - CRJUIComponents/RotateView (= 0.1.3)
-    - CRJUIComponents/RoundingCornerView (= 0.1.3)
-  - CRJUIComponents/BadgeValueView (0.1.3):
+  - CRJUIComponents (0.1.4):
+    - CRJUIComponents/BadgeValueView (= 0.1.4)
+    - CRJUIComponents/BaseShowPickerView (= 0.1.4)
+    - CRJUIComponents/CircleAnimationView (= 0.1.4)
+    - CRJUIComponents/CustomCell (= 0.1.4)
+    - CRJUIComponents/CustomControllers (= 0.1.4)
+    - CRJUIComponents/DateItemPickerView (= 0.1.4)
+    - CRJUIComponents/EdgeInsetsLabel (= 0.1.4)
+    - CRJUIComponents/InfiniteRotationView (= 0.1.4)
+    - CRJUIComponents/PlaceholderImageView (= 0.1.4)
+    - CRJUIComponents/RotateView (= 0.1.4)
+    - CRJUIComponents/RoundingCornerView (= 0.1.4)
+  - CRJUIComponents/BadgeValueView (0.1.4):
     - CRJCategories
-  - CRJUIComponents/BaseShowPickerView (0.1.3)
-  - CRJUIComponents/CircleAnimationView (0.1.3):
+  - CRJUIComponents/BaseShowPickerView (0.1.4)
+  - CRJUIComponents/CircleAnimationView (0.1.4):
     - CRJEasing
-  - CRJUIComponents/CustomCell (0.1.3)
-  - CRJUIComponents/CustomControllers (0.1.3):
+  - CRJUIComponents/CustomCell (0.1.4)
+  - CRJUIComponents/CustomControllers (0.1.4):
     - CRJCategories
     - CRJCommon
     - CRJGeneralTools/DeviceInfo
     - FDFullscreenPopGesture
-  - CRJUIComponents/DateItemPickerView (0.1.3):
+  - CRJUIComponents/DateItemPickerView (0.1.4):
     - CRJCategories
     - CRJCommon
     - CRJGeneralTools/DeviceInfo
     - CRJUIComponents/BaseShowPickerView
-  - CRJUIComponents/EdgeInsetsLabel (0.1.3):
+  - CRJUIComponents/EdgeInsetsLabel (0.1.4):
     - CRJCategories
-  - CRJUIComponents/InfiniteRotationView (0.1.3)
-  - CRJUIComponents/PlaceholderImageView (0.1.3):
+  - CRJUIComponents/InfiniteRotationView (0.1.4)
+  - CRJUIComponents/PlaceholderImageView (0.1.4):
     - SDWebImage
-  - CRJUIComponents/RotateView (0.1.3)
-  - CRJUIComponents/RoundingCornerView (0.1.3)
+  - CRJUIComponents/RotateView (0.1.4)
+  - CRJUIComponents/RoundingCornerView (0.1.4)
   - FDFullscreenPopGesture (1.1)
+  - Masonry (1.1.0)
   - SDWebImage (5.9.1):
     - SDWebImage/Core (= 5.9.1)
   - SDWebImage/Core (5.9.1)
 
 DEPENDENCIES:
   - CRJUIComponents (from `../`)
+  - Masonry
 
 SPEC REPOS:
   trunk:
@@ -79,6 +81,7 @@ SPEC REPOS:
     - CRJEasing
     - CRJGeneralTools
     - FDFullscreenPopGesture
+    - Masonry
     - SDWebImage
 
 EXTERNAL SOURCES:
@@ -90,10 +93,11 @@ SPEC CHECKSUMS:
   CRJCommon: bf4e373a509cf5db99a44ff0d382ff596e4b54b4
   CRJEasing: 251e1a33c57659de9afba68619a760858c90fa5c
   CRJGeneralTools: fe86dde826e955c3ef8bbe44b4432894a7269ab9
-  CRJUIComponents: 74539293f68c729d7c4a9f7e91e6f7cbe6d202f0
+  CRJUIComponents: 41c5db4931064467ed90c01d55470f54606b1e84
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
 
-PODFILE CHECKSUM: 3aa7a27e05c2c64e175573ea1df4503d0374edb6
+PODFILE CHECKSUM: aff53f64a0f6dd240c22739a04c9cd3ecc21cd1b
 
 COCOAPODS: 1.9.3
