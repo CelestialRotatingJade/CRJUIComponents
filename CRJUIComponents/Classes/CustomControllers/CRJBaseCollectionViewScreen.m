@@ -26,8 +26,6 @@
 
 - (void)setup {
     [super setup];
-    self.page = 1;
-    self.pageSize = 20;
 }
 
 
@@ -47,6 +45,11 @@
     recylerView.backgroundColor = [UIColor clearColor];
     recylerView.delegate = self;
     recylerView.dataSource = self;
+    if (@available(iOS 11.0, *)) {
+        recylerView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }else{
+        self.automaticallyAdjustsScrollViewInsets=NO;
+    }
     return recylerView;
 }
 
@@ -71,15 +74,6 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
     return cell;
-}
-
-
-#pragma mark - getter setter
-- (NSMutableArray *)dataSource {
-    if (!_dataSource) {
-        _dataSource = [NSMutableArray array];
-    }
-    return _dataSource;
 }
 
 

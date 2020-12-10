@@ -7,12 +7,17 @@
 //
 
 #import "CRJAppDelegate.h"
-
+#import "TNTTabBarController.h"
+#import <CRJUIComponents/CRJUIComponents.h>
 @implementation CRJAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[CRJAppearanceConfigure sharedInstance] setupDefaultConfigure];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[TNTTabBarController alloc] init];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

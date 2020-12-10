@@ -35,12 +35,12 @@
 /**
  *  CRJBaseHeaderFooterView's dataAdapter.
  */
-@property (nonatomic, weak) CRJCellHFDataAdapter *dataAdapter;
+@property (nonatomic, strong) CRJCellHFDataAdapter *dataAdapter;
 
 /**
  *  CustomHeaderFooterView's data.
  */
-@property (nonatomic, weak) id data;
+@property (nonatomic, strong) id data;
 
 /**
  *  UITableView's section.

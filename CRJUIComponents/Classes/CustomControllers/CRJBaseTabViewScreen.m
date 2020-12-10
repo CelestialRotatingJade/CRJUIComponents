@@ -25,8 +25,6 @@
 
 - (void)setup {
     [super setup];
-    self.page = 1;
-    self.pageSize = 20;
 }
 
 - (void)initSubviews {
@@ -49,6 +47,14 @@
     recylerView.separatorStyle = UITableViewCellSeparatorStyleNone;
     recylerView.delegate = self;
     recylerView.dataSource = self;
+    if (@available(iOS 11.0, *)) {
+        recylerView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        recylerView.estimatedRowHeight = 0;
+        recylerView.estimatedSectionHeaderHeight = 0;
+        recylerView.estimatedSectionFooterHeight = 0;
+    }else{
+        self.automaticallyAdjustsScrollViewInsets=NO;
+    }
     return recylerView;
 }
 
@@ -90,14 +96,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0;
-}
-
-#pragma mark - getter setter
-- (NSMutableArray *)dataSource {
-    if (!_dataSource) {
-        _dataSource = [NSMutableArray array];
-    }
-    return _dataSource;
 }
 
 

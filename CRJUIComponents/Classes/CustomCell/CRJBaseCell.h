@@ -33,17 +33,17 @@
 /**
  *  CustomCell's dataAdapter.
  */
-@property (nonatomic, weak) CRJCellDataAdapter *dataAdapter;
+@property (nonatomic, strong) CRJCellDataAdapter *dataAdapter;
 
 /**
  *  CustomCell's data.
  */
-@property (nonatomic, weak) id data;
+@property (nonatomic, strong) id data;
 
 /**
  *  CustomCell's indexPath.
  */
-@property (nonatomic, weak) NSIndexPath *indexPath;
+@property (nonatomic, strong) NSIndexPath *indexPath;
 
 /**
  *  TableView.
