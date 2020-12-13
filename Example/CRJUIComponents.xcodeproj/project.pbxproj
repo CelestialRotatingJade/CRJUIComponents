@@ -25,6 +25,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		AFA8B0CF2514A48A00F6C480 /* IMAGE1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFA8B0CE2514A48900F6C480 /* IMAGE1.jpg */; };
+		AFD665842583CED800414D4E /* TNTSingleChoicePickerViewScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD665832583CED800414D4E /* TNTSingleChoicePickerViewScreen.m */; };
 		D7110D092582117D0068B66B /* TNTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D082582117D0068B66B /* TNTNavigationController.m */; };
 		D7110D11258211DC0068B66B /* TNTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D10258211DC0068B66B /* TNTTabBarController.m */; };
 		D7110D1A2582124D0068B66B /* TNTComponentsScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D192582124D0068B66B /* TNTComponentsScreen.m */; };
@@ -32,8 +33,6 @@
 		D7110D2C258218190068B66B /* TNTComponentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D2B258218190068B66B /* TNTComponentCell.m */; };
 		D7110D40258224560068B66B /* TNTItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D3F258224560068B66B /* TNTItemStyle.m */; };
 		D7110D47258226930068B66B /* TNTDateItemPickerViewScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D46258226930068B66B /* TNTDateItemPickerViewScreen.m */; };
-		D7110D5C258228BE0068B66B /* SingleChoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D56258228BD0068B66B /* SingleChoiceCell.m */; };
-		D7110D5D258228BE0068B66B /* SingleChoicePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7110D59258228BE0068B66B /* SingleChoicePickerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +73,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1F0C6B7554C4990025253D4 /* Pods-CRJUIComponents_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRJUIComponents_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CRJUIComponents_Tests/Pods-CRJUIComponents_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFA8B0CE2514A48900F6C480 /* IMAGE1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMAGE1.jpg; sourceTree = "<group>"; };
+		AFD665822583CED800414D4E /* TNTSingleChoicePickerViewScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNTSingleChoicePickerViewScreen.h; sourceTree = "<group>"; };
+		AFD665832583CED800414D4E /* TNTSingleChoicePickerViewScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNTSingleChoicePickerViewScreen.m; sourceTree = "<group>"; };
 		D376AC03D995DFAFF562FD19 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D53BEA9DA9F92696C6382637 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D7110D072582117D0068B66B /* TNTNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNTNavigationController.h; sourceTree = "<group>"; };
@@ -91,10 +92,6 @@
 		D7110D3F258224560068B66B /* TNTItemStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNTItemStyle.m; sourceTree = "<group>"; };
 		D7110D45258226930068B66B /* TNTDateItemPickerViewScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNTDateItemPickerViewScreen.h; sourceTree = "<group>"; };
 		D7110D46258226930068B66B /* TNTDateItemPickerViewScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNTDateItemPickerViewScreen.m; sourceTree = "<group>"; };
-		D7110D56258228BD0068B66B /* SingleChoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleChoiceCell.m; sourceTree = "<group>"; };
-		D7110D58258228BE0068B66B /* SingleChoicePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleChoicePickerView.h; sourceTree = "<group>"; };
-		D7110D59258228BE0068B66B /* SingleChoicePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleChoicePickerView.m; sourceTree = "<group>"; };
-		D7110D5A258228BE0068B66B /* SingleChoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleChoiceCell.h; sourceTree = "<group>"; };
 		ECA767EFECEC410B8C136287 /* Pods-CRJUIComponents_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRJUIComponents_Example.release.xcconfig"; path = "Target Support Files/Pods-CRJUIComponents_Example/Pods-CRJUIComponents_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F70CCC9E0A91EED1314A0D39 /* Pods_CRJUIComponents_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRJUIComponents_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -261,13 +258,14 @@
 		D7110D16258211F50068B66B /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D7110D4D258228AB0068B66B /* SingleChoicePickerView */,
 				D7110D3D258224430068B66B /* Model */,
 				D7110D29258217F40068B66B /* View */,
 				D7110D182582124D0068B66B /* TNTComponentsScreen.h */,
 				D7110D192582124D0068B66B /* TNTComponentsScreen.m */,
 				D7110D45258226930068B66B /* TNTDateItemPickerViewScreen.h */,
 				D7110D46258226930068B66B /* TNTDateItemPickerViewScreen.m */,
+				AFD665822583CED800414D4E /* TNTSingleChoicePickerViewScreen.h */,
+				AFD665832583CED800414D4E /* TNTSingleChoicePickerViewScreen.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -297,17 +295,6 @@
 				D7110D3F258224560068B66B /* TNTItemStyle.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		D7110D4D258228AB0068B66B /* SingleChoicePickerView */ = {
-			isa = PBXGroup;
-			children = (
-				D7110D5A258228BE0068B66B /* SingleChoiceCell.h */,
-				D7110D56258228BD0068B66B /* SingleChoiceCell.m */,
-				D7110D58258228BE0068B66B /* SingleChoicePickerView.h */,
-				D7110D59258228BE0068B66B /* SingleChoicePickerView.m */,
-			);
-			path = SingleChoicePickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,25 +426,33 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CRJUIComponents_Example/Pods-CRJUIComponents_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CRJAlertDialog/CRJAlertDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/CRJCategories/CRJCategories.framework",
 				"${BUILT_PRODUCTS_DIR}/CRJCommon/CRJCommon.framework",
 				"${BUILT_PRODUCTS_DIR}/CRJEasing/CRJEasing.framework",
 				"${BUILT_PRODUCTS_DIR}/CRJGeneralTools/CRJGeneralTools.framework",
+				"${BUILT_PRODUCTS_DIR}/CRJTransitionAnimator/CRJTransitionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/CRJUIComponents/CRJUIComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/CRJUtlsScreens/CRJUtlsScreens.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRJAlertDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRJCategories.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRJCommon.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRJEasing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRJGeneralTools.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRJTransitionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRJUIComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRJUtlsScreens.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -502,9 +497,8 @@
 				D7110D47258226930068B66B /* TNTDateItemPickerViewScreen.m in Sources */,
 				D7110D40258224560068B66B /* TNTItemStyle.m in Sources */,
 				D7110D2C258218190068B66B /* TNTComponentCell.m in Sources */,
+				AFD665842583CED800414D4E /* TNTSingleChoicePickerViewScreen.m in Sources */,
 				D7110D1F258212640068B66B /* TNTSettingScreen.m in Sources */,
-				D7110D5C258228BE0068B66B /* SingleChoiceCell.m in Sources */,
-				D7110D5D258228BE0068B66B /* SingleChoicePickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,4 +1,19 @@
 PODS:
+  - CRJAlertDialog (0.1.0):
+    - CRJAlertDialog/BaseDialog (= 0.1.0)
+    - CRJAlertDialog/DateDialog (= 0.1.0)
+    - CRJAlertDialog/MultiChoiceDialog (= 0.1.0)
+    - CRJAlertDialog/SingleChoiceDialog (= 0.1.0)
+  - CRJAlertDialog/BaseDialog (0.1.0):
+    - CRJCategories
+    - CRJTransitionAnimator
+    - Masonry
+  - CRJAlertDialog/DateDialog (0.1.0):
+    - CRJAlertDialog/BaseDialog
+  - CRJAlertDialog/MultiChoiceDialog (0.1.0):
+    - CRJAlertDialog/BaseDialog
+  - CRJAlertDialog/SingleChoiceDialog (0.1.0):
+    - CRJAlertDialog/BaseDialog
   - CRJCategories (0.1.3):
     - CRJCategories/CALayer (= 0.1.3)
     - CRJCategories/CAShapeLayer (= 0.1.3)
@@ -28,14 +43,12 @@ PODS:
   - CRJCategories/UIViewController (0.1.3)
   - CRJCommon (0.1.3)
   - CRJEasing (0.1.0)
-  - CRJGeneralTools/DeviceInfo (0.1.4)
+  - CRJGeneralTools/DeviceInfo (0.1.41)
+  - CRJTransitionAnimator (0.1.1)
   - CRJUIComponents (0.1.4):
     - CRJUIComponents/BadgeValueView (= 0.1.4)
-    - CRJUIComponents/BaseShowPickerView (= 0.1.4)
     - CRJUIComponents/CircleAnimationView (= 0.1.4)
     - CRJUIComponents/CustomCell (= 0.1.4)
-    - CRJUIComponents/CustomControllers (= 0.1.4)
-    - CRJUIComponents/DateItemPickerView (= 0.1.4)
     - CRJUIComponents/EdgeInsetsLabel (= 0.1.4)
     - CRJUIComponents/InfiniteRotationView (= 0.1.4)
     - CRJUIComponents/PlaceholderImageView (= 0.1.4)
@@ -43,20 +56,9 @@ PODS:
     - CRJUIComponents/RoundingCornerView (= 0.1.4)
   - CRJUIComponents/BadgeValueView (0.1.4):
     - CRJCategories
-  - CRJUIComponents/BaseShowPickerView (0.1.4)
   - CRJUIComponents/CircleAnimationView (0.1.4):
     - CRJEasing
   - CRJUIComponents/CustomCell (0.1.4)
-  - CRJUIComponents/CustomControllers (0.1.4):
-    - CRJCategories
-    - CRJCommon
-    - CRJGeneralTools/DeviceInfo
-    - FDFullscreenPopGesture
-  - CRJUIComponents/DateItemPickerView (0.1.4):
-    - CRJCategories
-    - CRJCommon
-    - CRJGeneralTools/DeviceInfo
-    - CRJUIComponents/BaseShowPickerView
   - CRJUIComponents/EdgeInsetsLabel (0.1.4):
     - CRJCategories
   - CRJUIComponents/InfiniteRotationView (0.1.4)
@@ -64,40 +66,57 @@ PODS:
     - SDWebImage
   - CRJUIComponents/RotateView (0.1.4)
   - CRJUIComponents/RoundingCornerView (0.1.4)
+  - CRJUtlsScreens (0.1.0):
+    - CRJCategories
+    - CRJCommon
+    - CRJGeneralTools/DeviceInfo
+    - FDFullscreenPopGesture
   - FDFullscreenPopGesture (1.1)
   - Masonry (1.1.0)
-  - SDWebImage (5.9.1):
-    - SDWebImage/Core (= 5.9.1)
-  - SDWebImage/Core (5.9.1)
+  - SDWebImage (5.10.0):
+    - SDWebImage/Core (= 5.10.0)
+  - SDWebImage/Core (5.10.0)
+  - Toast (4.0.0)
 
 DEPENDENCIES:
+  - CRJAlertDialog
   - CRJUIComponents (from `../`)
+  - CRJUtlsScreens
   - Masonry
+  - Toast
 
 SPEC REPOS:
   trunk:
+    - CRJAlertDialog
     - CRJCategories
     - CRJCommon
     - CRJEasing
     - CRJGeneralTools
+    - CRJTransitionAnimator
+    - CRJUtlsScreens
     - FDFullscreenPopGesture
     - Masonry
     - SDWebImage
+    - Toast
 
 EXTERNAL SOURCES:
   CRJUIComponents:
     :path: "../"
 
 SPEC CHECKSUMS:
+  CRJAlertDialog: 06f10e3ee300f6941799cca53d79e663c8ffc0fc
   CRJCategories: ba62c4b30268f1f3455f2a03fbba792f8a4d1503
   CRJCommon: bf4e373a509cf5db99a44ff0d382ff596e4b54b4
   CRJEasing: 251e1a33c57659de9afba68619a760858c90fa5c
-  CRJGeneralTools: fe86dde826e955c3ef8bbe44b4432894a7269ab9
-  CRJUIComponents: 41c5db4931064467ed90c01d55470f54606b1e84
+  CRJGeneralTools: 9568d17e06989bda99504662e1554fd1b6409032
+  CRJTransitionAnimator: 77157d3db4ce8c4c9c325eaac362bae4ed3cd3d7
+  CRJUIComponents: 98b4dcbea3dcc64406b25efe4794728ce5d7d526
+  CRJUtlsScreens: 80b3c371dfa296bf4a7bcf2361fa75de067dbc27
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
+  SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: aff53f64a0f6dd240c22739a04c9cd3ecc21cd1b
+PODFILE CHECKSUM: 839bb6ecb4f3eb37876e325a841def92a1af044a
 
 COCOAPODS: 1.9.3

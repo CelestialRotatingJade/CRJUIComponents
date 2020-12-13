@@ -46,11 +46,11 @@
     BOOL IsPortrait = CRJDeviceInfo.isPortrait;//是否是竖屏
     CGFloat safeAreaTop = 0;
     if (IsPortrait) {
-        safeAreaTop = CRJDeviceInfo.safeAreaInsets.top;
+        safeAreaTop = CRJDeviceInfo.isFringeScreen ? CRJDeviceInfo.fringeScreenTopSafeHeight : 20;
     } else {
         safeAreaTop = 0;
     }
-    CGFloat appBarH = safeAreaTop + [CRJAppearanceConfigure sharedInstance].navigationBarHeight;
+    CGFloat appBarH = safeAreaTop + kCRJAppearanceConfigure.navigationBarHeight;
     self.appBar.frame = CGRectMake(0, 0, self.view.width, appBarH);
 }
 
@@ -61,7 +61,7 @@
 
 - (void)initSubviews{
     self.contentView = [[UIView alloc] initWithFrame:self.view.bounds];
-    self.contentView.backgroundColor = [CRJAppearanceConfigure sharedInstance].scaffoldBackgroundColor;
+    self.contentView.backgroundColor = kCRJAppearanceConfigure.scaffoldBackgroundColor;
     [self.view addSubview:self.contentView];
 
     
@@ -108,8 +108,8 @@
 #pragma mark - getter setter
 - (UIButton *)backItem{
     if (!_backItem) {
-        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, [CRJAppearanceConfigure sharedInstance].navigationBarHeight, [CRJAppearanceConfigure sharedInstance].navigationBarHeight)];
-        [btn setImage:CRJAppearanceConfigure.sharedInstance.topbar_back_image forState:UIControlStateNormal];
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kCRJAppearanceConfigure.navigationBarHeight, kCRJAppearanceConfigure.navigationBarHeight)];
+        [btn setImage:kCRJAppearanceConfigure.topbar_back_image forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(backItemDidClicked) forControlEvents:UIControlEventTouchUpInside];
         _backItem = btn;
     }

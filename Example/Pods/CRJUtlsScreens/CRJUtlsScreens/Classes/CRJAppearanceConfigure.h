@@ -7,6 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+#define kCRJAppearanceConfigure [CRJAppearanceConfigure sharedInstance]
+
 @interface CRJAppearanceConfigure : NSObject
 #pragma mark - 颜色
 /// app主色
@@ -44,5 +47,7 @@
 
 // 更新配置
 - (void)updateConfigure:(void (^)(CRJAppearanceConfigure *configure))block;
+
+- (UIImage *)imageFromCustomBundle:(NSString *)name;
 @end
 

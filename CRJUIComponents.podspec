@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CRJUIComponents'
-  s.version          = '0.1.4'
+  s.version          = '0.1.401'
   s.summary          = 'A short description of CRJUIComponents.'
 
 # This description is used to generate tags and improve search results.
@@ -47,10 +47,6 @@ TODO: Add long description of the pod here.
     ss.dependency 'CRJCategories'
   end
 
-  s.subspec 'BaseShowPickerView' do |ss|
-    ss.source_files = 'CRJUIComponents/**/BaseShowPickerView/*.{h,m}'
-  end
-
   s.subspec 'CircleAnimationView' do |ss|
     ss.source_files = 'CRJUIComponents/**/CircleAnimationView/*.{h,m}'
     ss.dependency 'CRJEasing'
@@ -60,22 +56,6 @@ TODO: Add long description of the pod here.
     ss.source_files = 'CRJUIComponents/**/CustomCell/*.{h,m}'
   end
   
-  s.subspec 'CustomControllers' do |ss|
-    ss.source_files = 'CRJUIComponents/**/CustomControllers/*.{h,m}'
-    ss.dependency 'CRJGeneralTools/DeviceInfo'
-    ss.dependency 'CRJCommon'
-    ss.dependency 'CRJCategories'
-    ss.dependency 'FDFullscreenPopGesture'
-  end
-  
-  s.subspec 'DateItemPickerView' do |ss|
-    ss.source_files = 'CRJUIComponents/**/DateItemPickerView/*.{h,m}'
-    ss.dependency 'CRJUIComponents/BaseShowPickerView'
-    ss.dependency 'CRJGeneralTools/DeviceInfo'
-    ss.dependency 'CRJCategories'
-    ss.dependency 'CRJCommon'
-  end
-
   s.subspec 'EdgeInsetsLabel' do |ss|
     ss.source_files = 'CRJUIComponents/**/EdgeInsetsLabel/*.{h,m}'
     ss.dependency 'CRJCategories'

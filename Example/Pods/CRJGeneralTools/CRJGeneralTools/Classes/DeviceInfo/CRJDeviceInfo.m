@@ -82,57 +82,34 @@
     if (@available(iOS 11.0, *)) {
         UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
         areaInsets = window.safeAreaInsets;
-        #ifdef DEBUG
-            NSLog(@"window.safeAreaInsets %@",NSStringFromUIEdgeInsets(window.safeAreaInsets));
-        #else
-            
-        #endif
     }
     return areaInsets;
 }
 
 + (BOOL)isFringeScreen {
-    
-    static BOOL isFringeScreen = NO;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (CRJDeviceInfo.deviceType == CRJDevice_375x812 ||
-            CRJDeviceInfo.deviceType == CRJDevice_414x896) {
+    BOOL isFringeScreen = NO;
+    if (@available(iOS 11.0, *)) {
+        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+        if (mainWindow.safeAreaInsets.bottom > 0.0) {
             isFringeScreen = YES;
         }
-    });
-    
+    }
     return isFringeScreen;
 }
 
 + (CGFloat)fringeScreenTopSafeHeight {
-    
-    static CGFloat height = 0;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (CRJDeviceInfo.deviceType == CRJDevice_375x812 ||
-            CRJDeviceInfo.deviceType == CRJDevice_414x896) {
-            height = 44.f;
-        }
-    });
-    
+    CGFloat height = 0;
+    if ([self isFringeScreen]) {
+        height = 44.f;
+    }
     return height;
 }
 
 + (CGFloat)fringeScreenBottomSafeHeight {
-    
-    static CGFloat height = 0;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        if (CRJDeviceInfo.deviceType == CRJDevice_375x812 ||
-            CRJDeviceInfo.deviceType == CRJDevice_414x896) {
-            height = 34.f;
-        }
-    });
-    
+    CGFloat height = 0;
+    if ([self isFringeScreen]) {
+        height = 34.f;
+    }
     return height;
 }
 

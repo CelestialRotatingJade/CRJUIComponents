@@ -15,7 +15,7 @@
     if (self) {
         self.bgView = [[UIImageView alloc] init];
         self.bgView.userInteractionEnabled = YES;
-        self.bgView.backgroundColor = [CRJAppearanceConfigure sharedInstance].topAppBarColor;
+        self.bgView.backgroundColor = kCRJAppearanceConfigure.topAppBarColor;
         
         self.navigationBar = [[UIView alloc] init];
         self.navigationBar.backgroundColor = [UIColor clearColor];
@@ -29,11 +29,11 @@
         self.titleLabel = [[UILabel alloc] init];
         self.titleLabel.text = @"";
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
-        self.titleLabel.font = [CRJAppearanceConfigure sharedInstance].topAppBarTextFont;
-        self.titleLabel.textColor = [CRJAppearanceConfigure sharedInstance].topAppBarTextColor;
+        self.titleLabel.font = kCRJAppearanceConfigure.topAppBarTextFont;
+        self.titleLabel.textColor = kCRJAppearanceConfigure.topAppBarTextColor;
         
         self.divideLine = [[UIView alloc] init];
-        self.divideLine.backgroundColor = [CRJAppearanceConfigure sharedInstance].dividerColor;
+        self.divideLine.backgroundColor = kCRJAppearanceConfigure.dividerColor;
 
         [self addSubview:self.bgView];
         [self addSubview:self.navigationBar];
@@ -53,7 +53,7 @@
     [self.leftBarContainers.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self.rightBarContainers.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
-    CGFloat navigationBarHeight = [CRJAppearanceConfigure sharedInstance].navigationBarHeight;;
+    CGFloat navigationBarHeight = kCRJAppearanceConfigure.navigationBarHeight;;
     
     self.bgView.frame = CGRectMake(0, 0, self.width, self.height);
     self.navigationBar.frame = CGRectMake(0, self.height - navigationBarHeight, self.width, navigationBarHeight);

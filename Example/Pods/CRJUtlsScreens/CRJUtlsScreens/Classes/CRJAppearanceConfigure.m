@@ -46,7 +46,7 @@
 
     
 #pragma mark - 图片
-    _topbar_back_image = [UIImage imageNamed:@"topbar_back_black"];
+    _topbar_back_image = [self imageFromCustomBundle:@"backArrow"];
 }
 
 - (void)setupCustomConfigure:(void (^)(CRJAppearanceConfigure *))block {
@@ -59,4 +59,14 @@
     !block ? : block(self);
 }
 
+
+- (UIImage *)imageFromCustomBundle:(NSString *)name {
+    NSString *bundlePath = [[NSBundle bundleForClass:[self class]].resourcePath
+        stringByAppendingPathComponent:@"/CRJUtlsScreens.bundle"];
+    NSBundle *resource_bundle = [NSBundle bundleWithPath:bundlePath];
+    UIImage *image = [UIImage imageNamed:name
+                                inBundle:resource_bundle
+           compatibleWithTraitCollection:nil];
+    return image;
+}
 @end

@@ -1,0 +1,6 @@
+framework module CRJAlertDialog {
+  umbrella header "CRJAlertDialog-umbrella.h"
+
+  export *
+  module * { export * }
+}

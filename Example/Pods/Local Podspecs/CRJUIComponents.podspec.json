@@ -31,10 +31,6 @@
       }
     },
     {
-      "name": "BaseShowPickerView",
-      "source_files": "CRJUIComponents/**/BaseShowPickerView/*.{h,m}"
-    },
-    {
       "name": "CircleAnimationView",
       "source_files": "CRJUIComponents/**/CircleAnimationView/*.{h,m}",
       "dependencies": {
@@ -46,42 +42,6 @@
     {
       "name": "CustomCell",
       "source_files": "CRJUIComponents/**/CustomCell/*.{h,m}"
-    },
-    {
-      "name": "CustomControllers",
-      "source_files": "CRJUIComponents/**/CustomControllers/*.{h,m}",
-      "dependencies": {
-        "CRJGeneralTools/DeviceInfo": [
-
-        ],
-        "CRJCommon": [
-
-        ],
-        "CRJCategories": [
-
-        ],
-        "FDFullscreenPopGesture": [
-
-        ]
-      }
-    },
-    {
-      "name": "DateItemPickerView",
-      "source_files": "CRJUIComponents/**/DateItemPickerView/*.{h,m}",
-      "dependencies": {
-        "CRJUIComponents/BaseShowPickerView": [
-
-        ],
-        "CRJGeneralTools/DeviceInfo": [
-
-        ],
-        "CRJCategories": [
-
-        ],
-        "CRJCommon": [
-
-        ]
-      }
     },
     {
       "name": "EdgeInsetsLabel",

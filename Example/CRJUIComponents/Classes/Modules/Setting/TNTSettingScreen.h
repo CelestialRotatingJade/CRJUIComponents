@@ -5,9 +5,7 @@
 //  Created by 朱玉辉(EX-ZHUYUHUI001) on 2020/12/10.
 //  Copyright © 2020 zhuyuhui434@gmail.com. All rights reserved.
 //
-
-#import <CRJUIComponents/CRJUIComponents.h>
-
+#import <CRJUtlsScreens/CRJUtlsScreens.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TNTSettingScreen : CRJBaseTabViewScreen

@@ -7,8 +7,10 @@
 //
 
 #import "TNTDateItemPickerViewScreen.h"
-
-@interface TNTDateItemPickerViewScreen ()
+#import <CRJAlertDialog/CRJAlertDialog.h>
+#import <CRJTransitionAnimator/CRJTransitionAnimator.h>
+#import <Toast/Toast.h>
+@interface TNTDateItemPickerViewScreen ()<CRJAlertBaseDialogDelegate>
 
 @end
 
@@ -19,14 +21,51 @@
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)showPicker {
+    
+    NSMutableArray *datas = [NSMutableArray array];
+    for (int i = 0; i < 1000; i++) {
+        [datas addObject:[NSString stringWithFormat:@"%d",i]];
+    }
+    CRJAlertBaseDialog *dialog = CRJDateDialog.build.withDelegate(self).withInfo(@"请选择开始日期");
+    [self presentViewController:dialog animation:CRJDateDialog.defaultAnimator completion:^{
+        
+    }];
 }
-*/
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self showPicker];
+//    UIDatePicker *picker  = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 140.f, self.view.width, 180.f)];
+//    picker.datePickerMode = UIDatePickerModeDate;
+//    if (@available(iOS 13.4, *)) {
+////        picker.preferredDatePickerStyle = UIDatePickerStyleWheels;//滚轮
+//    }
+//
+//    [self.contentView addSubview:picker];
+
+    
+    
+    
+}
+
+
+#pragma mark - CRJAlertBaseDialogDelegate
+-(void)baseDialog:(CRJAlertBaseDialog *)dialog didSelectedItems:(NSArray *)items {
+    if (items) {
+        [self.view makeToast:[NSString stringWithFormat:@"%@",items.firstObject]];
+    }
+}
+
+- (void)baseDialogWillShow:(CRJAlertBaseDialog *)dialog {
+    if ([dialog isKindOfClass:CRJDateDialog.class]) {
+        UIDatePicker *picker = dialog.picker;
+        if (@available(iOS 13.4, *)) {
+            picker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];//新发现这里不会根据系统的语言变了
+            picker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+}
 @end

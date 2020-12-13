@@ -8,7 +8,7 @@
 
 #import "CRJAppDelegate.h"
 #import "TNTTabBarController.h"
-#import <CRJUIComponents/CRJUIComponents.h>
+#import <CRJUtlsScreens/CRJUtlsScreens.h>
 @implementation CRJAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

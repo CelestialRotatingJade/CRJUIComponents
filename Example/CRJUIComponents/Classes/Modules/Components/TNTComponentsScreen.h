@@ -6,7 +6,7 @@
 //  Copyright © 2020 zhuyuhui434@gmail.com. All rights reserved.
 //
 
-#import <CRJUIComponents/CRJUIComponents.h>
+#import <CRJUtlsScreens/CRJUtlsScreens.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

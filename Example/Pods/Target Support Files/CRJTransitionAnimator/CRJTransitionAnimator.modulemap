@@ -1,0 +1,6 @@
+framework module CRJTransitionAnimator {
+  umbrella header "CRJTransitionAnimator-umbrella.h"
+
+  export *
+  module * { export * }
+}

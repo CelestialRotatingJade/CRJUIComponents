@@ -9,16 +9,10 @@
 #define CRJUIComponents_h
 //角标View
 #import "CRJBadgeValueView.h"
-//BaseShowPickerView
-#import "CRJBaseShowPickerView.h"
 //进度条圆环
 #import "CRJCircleAnimationView.h"
 //CustomCell
 #import "CRJCustomCell.h"
-//CustomControllers
-#import "CRJCustomControllers.h"
-//日期PickerView
-#import "CRJDateItemPickerView.h"
 //EdgeInsetsLabel
 #import "CRJEdgeInsetsLabel.h"
 #import "CRJIconEdgeInsetsLabel.h"

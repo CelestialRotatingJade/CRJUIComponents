@@ -9,8 +9,6 @@
 #import "TNTComponentsScreen.h"
 #import "TNTComponentCell.h"
 #import "TNTItemStyle.h"
-#import "SingleChoicePickerView.h"
-
 @interface TNTComponentsScreen ()
 @property(nonatomic, strong) NSMutableArray <TNTItemStyle *>*objects;
 @end
@@ -52,9 +50,6 @@
     UIViewController *screen = [[style.controller alloc] init];
     screen.title = style.title;
     [self.navigationController pushViewController:screen animated:YES];
-    
-    SingleChoicePickerView.build.withObject(self).withDelegate(self).withInfo(@"请选择").withSelectedItem(nil).withShowDatas(@[@"sdsd",@"dsda",@"4342"]).prepareAndShowInKeyWindow();
-
 }
 
 
@@ -63,9 +58,16 @@
     if (!_objects) {
         _objects = [NSMutableArray array];
         [_objects addObject:[TNTItemStyle create:^(TNTItemStyle * _Nonnull style) {
-            style.title = @"DateItemPickerView";
+            style.title = @"日期选择器";
             style.controller = NSClassFromString(@"TNTDateItemPickerViewScreen");
         }]];
+        [_objects addObject:[TNTItemStyle create:^(TNTItemStyle * _Nonnull style) {
+            style.title = @"单项选择器";
+            style.controller = NSClassFromString(@"TNTSingleChoicePickerViewScreen");
+        }]];
+        
+        
+        
     }
     return _objects;
 }
