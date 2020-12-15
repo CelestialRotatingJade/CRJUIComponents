@@ -28,10 +28,31 @@
     for (int i = 0; i < 1000; i++) {
         [datas addObject:[NSString stringWithFormat:@"%d",i]];
     }
-    CRJAlertBaseDialog *dialog = CRJDateDialog.build.withDelegate(self).withInfo(@"请选择开始日期");
-    [self presentViewController:dialog animation:CRJDateDialog.defaultAnimator completion:^{
-        
+    
+    [self dissMissPresentedViewController:^{
+        CRJAlertBaseDialog *dialog = CRJDateDialog.build.withDelegate(self).withInfo(@"请选择开始日期");
+        [self presentViewController:dialog animation:[DLAnimationBottom new] completion:^{
+            
+        }];
+
     }];
+}
+
+- (void)dissMissPresentedViewController:(void (^)(void))completion {
+    if (self.presentedViewController) {
+        UIViewController *topVC = self.presentedViewController;
+        [topVC dismissViewControllerAnimated:NO completion:nil];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (completion) {
+                completion();
+            }
+        });
+        
+    } else {
+        if (completion) {
+            completion();
+        }
+    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -44,7 +65,9 @@
 //
 //    [self.contentView addSubview:picker];
 
-    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self showPicker];
+    });
     
     
 }
