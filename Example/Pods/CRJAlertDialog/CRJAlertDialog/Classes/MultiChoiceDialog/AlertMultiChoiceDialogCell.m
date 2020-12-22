@@ -68,14 +68,14 @@
     if ([self.data isKindOfClass:NSString.class]) {
         self.titleLabel.text = self.data;
     }
-    
+
     if ([self.dialog.disableItems containsObject:self.data]) {
-        self.selectImgView.image = [UIImage imageNamed:@"multi_checkbox_disable"];
+        self.selectImgView.image = [self.dialog imageFromCustomBundle:@"multi_checkbox_disable"];
     } else {
         if ([self.dialog.checkedItems containsObject:self.data]) {
-            self.selectImgView.image = [UIImage imageNamed:@"multi_checkbox_checked"];
+            self.selectImgView.image = [self.dialog imageFromCustomBundle:@"multi_checkbox_checked"];
         } else {
-            self.selectImgView.image = [UIImage imageNamed:@"multi_checkbox_uncheck"];
+            self.selectImgView.image = [self.dialog imageFromCustomBundle:@"multi_checkbox_uncheck"];
         }
     }
 }
@@ -84,7 +84,7 @@
 - (UIView *)bLine {
     if (!_bLine) {
         _bLine = [[UIView alloc] init];
-        _bLine.backgroundColor = CC_Color_Line;
+        _bLine.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
     }
     return _bLine;
 }

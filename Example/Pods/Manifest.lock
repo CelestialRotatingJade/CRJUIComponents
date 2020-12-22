@@ -1,18 +1,18 @@
 PODS:
-  - CRJAlertDialog (0.1.0):
-    - CRJAlertDialog/BaseDialog (= 0.1.0)
-    - CRJAlertDialog/DateDialog (= 0.1.0)
-    - CRJAlertDialog/MultiChoiceDialog (= 0.1.0)
-    - CRJAlertDialog/SingleChoiceDialog (= 0.1.0)
-  - CRJAlertDialog/BaseDialog (0.1.0):
+  - CRJAlertDialog (0.1.1):
+    - CRJAlertDialog/BaseDialog (= 0.1.1)
+    - CRJAlertDialog/DateDialog (= 0.1.1)
+    - CRJAlertDialog/MultiChoiceDialog (= 0.1.1)
+    - CRJAlertDialog/SingleChoiceDialog (= 0.1.1)
+  - CRJAlertDialog/BaseDialog (0.1.1):
     - CRJCategories
     - CRJTransitionAnimator
     - Masonry
-  - CRJAlertDialog/DateDialog (0.1.0):
+  - CRJAlertDialog/DateDialog (0.1.1):
     - CRJAlertDialog/BaseDialog
-  - CRJAlertDialog/MultiChoiceDialog (0.1.0):
+  - CRJAlertDialog/MultiChoiceDialog (0.1.1):
     - CRJAlertDialog/BaseDialog
-  - CRJAlertDialog/SingleChoiceDialog (0.1.0):
+  - CRJAlertDialog/SingleChoiceDialog (0.1.1):
     - CRJAlertDialog/BaseDialog
   - CRJCategories (0.1.3):
     - CRJCategories/CALayer (= 0.1.3)
@@ -45,27 +45,27 @@ PODS:
   - CRJEasing (0.1.0)
   - CRJGeneralTools/DeviceInfo (0.1.41)
   - CRJTransitionAnimator (0.1.1)
-  - CRJUIComponents (0.1.4):
-    - CRJUIComponents/BadgeValueView (= 0.1.4)
-    - CRJUIComponents/CircleAnimationView (= 0.1.4)
-    - CRJUIComponents/CustomCell (= 0.1.4)
-    - CRJUIComponents/EdgeInsetsLabel (= 0.1.4)
-    - CRJUIComponents/InfiniteRotationView (= 0.1.4)
-    - CRJUIComponents/PlaceholderImageView (= 0.1.4)
-    - CRJUIComponents/RotateView (= 0.1.4)
-    - CRJUIComponents/RoundingCornerView (= 0.1.4)
-  - CRJUIComponents/BadgeValueView (0.1.4):
+  - CRJUIComponents (0.1.401):
+    - CRJUIComponents/BadgeValueView (= 0.1.401)
+    - CRJUIComponents/CircleAnimationView (= 0.1.401)
+    - CRJUIComponents/CustomCell (= 0.1.401)
+    - CRJUIComponents/EdgeInsetsLabel (= 0.1.401)
+    - CRJUIComponents/InfiniteRotationView (= 0.1.401)
+    - CRJUIComponents/PlaceholderImageView (= 0.1.401)
+    - CRJUIComponents/RotateView (= 0.1.401)
+    - CRJUIComponents/RoundingCornerView (= 0.1.401)
+  - CRJUIComponents/BadgeValueView (0.1.401):
     - CRJCategories
-  - CRJUIComponents/CircleAnimationView (0.1.4):
+  - CRJUIComponents/CircleAnimationView (0.1.401):
     - CRJEasing
-  - CRJUIComponents/CustomCell (0.1.4)
-  - CRJUIComponents/EdgeInsetsLabel (0.1.4):
+  - CRJUIComponents/CustomCell (0.1.401)
+  - CRJUIComponents/EdgeInsetsLabel (0.1.401):
     - CRJCategories
-  - CRJUIComponents/InfiniteRotationView (0.1.4)
-  - CRJUIComponents/PlaceholderImageView (0.1.4):
+  - CRJUIComponents/InfiniteRotationView (0.1.401)
+  - CRJUIComponents/PlaceholderImageView (0.1.401):
     - SDWebImage
-  - CRJUIComponents/RotateView (0.1.4)
-  - CRJUIComponents/RoundingCornerView (0.1.4)
+  - CRJUIComponents/RotateView (0.1.401)
+  - CRJUIComponents/RoundingCornerView (0.1.401)
   - CRJUtlsScreens (0.1.0):
     - CRJCategories
     - CRJCommon
@@ -79,7 +79,7 @@ PODS:
   - Toast (4.0.0)
 
 DEPENDENCIES:
-  - CRJAlertDialog
+  - CRJAlertDialog (= 0.1.1)
   - CRJUIComponents (from `../`)
   - CRJUtlsScreens
   - Masonry
@@ -104,19 +104,19 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CRJAlertDialog: 06f10e3ee300f6941799cca53d79e663c8ffc0fc
+  CRJAlertDialog: 03e1e84f586fc8d437a486db62563003c6aa1293
   CRJCategories: ba62c4b30268f1f3455f2a03fbba792f8a4d1503
   CRJCommon: bf4e373a509cf5db99a44ff0d382ff596e4b54b4
   CRJEasing: 251e1a33c57659de9afba68619a760858c90fa5c
   CRJGeneralTools: 9568d17e06989bda99504662e1554fd1b6409032
   CRJTransitionAnimator: 77157d3db4ce8c4c9c325eaac362bae4ed3cd3d7
-  CRJUIComponents: 98b4dcbea3dcc64406b25efe4794728ce5d7d526
+  CRJUIComponents: eabed177a40f4ca1e8c56619b447fcf81640d8f3
   CRJUtlsScreens: 80b3c371dfa296bf4a7bcf2361fa75de067dbc27
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 839bb6ecb4f3eb37876e325a841def92a1af044a
+PODFILE CHECKSUM: afe018bd847c70fb9d5212e80a7995a7b1ad40ef
 
 COCOAPODS: 1.9.3

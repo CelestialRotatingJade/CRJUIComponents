@@ -9,7 +9,7 @@
 #import "TNTSingleChoicePickerViewScreen.h"
 #import <CRJAlertDialog/CRJAlertDialog.h>
 #import <Toast/Toast.h>
-@interface TNTSingleChoicePickerViewScreen ()<CRJAlertBaseDialogDelegate>
+@interface TNTSingleChoicePickerViewScreen ()<AlertBaseDialogDelegate>
 
 @end
 
@@ -27,10 +27,11 @@
         [datas addObject:[NSString stringWithFormat:@"%d",i]];
     }
     
-    CRJAlertBaseDialog *dialog = CRJSingleChoiceDialog.build.withAnimator(CRJSingleChoiceDialog.defaultAnimator).withDelegate(self).withShowDatas(datas).withInfo(@"请选择开始日期");
-    [self presentViewController:dialog animation:CRJSingleChoiceDialog.defaultAnimator completion:^{
-        
-    }];
+    AlertSingleChoiceDialog *dialog = AlertSingleChoiceDialog.build;
+    dialog.withDelegate(self);
+    dialog.withShowDatas(datas).withInfo(@"请选择开始日期").prepareFinish();
+    [self presentViewController:dialog
+                      animation:dialog.animator completion:nil];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -39,7 +40,7 @@
 
 
 #pragma mark - CRJAlertBaseDialogDelegate
--(void)baseDialog:(CRJAlertBaseDialog *)dialog didSelectedItems:(NSArray *)items {
+-(void)baseDialog:(AlertBaseDialog *)dialog didSelectedItems:(NSArray *)items {
     if (items) {
         [self.view makeToast:[NSString stringWithFormat:@"%@",items.firstObject]];
     }

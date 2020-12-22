@@ -7,7 +7,6 @@
 //
 
 #import "AlertBaseDialog.h"
-#import "DLAnimationBottom.h"
 @interface AlertBaseDialog ()
 
 @end
@@ -68,6 +67,15 @@
     return animator;
 }
 
+- (UIImage *)imageFromCustomBundle:(NSString *)name {
+    NSString *bundlePath = [[NSBundle bundleForClass:[self class]].resourcePath
+        stringByAppendingPathComponent:@"/CRJAlertDialog.bundle"];
+    NSBundle *resource_bundle = [NSBundle bundleWithPath:bundlePath];
+    UIImage *image = [UIImage imageNamed:name
+                                inBundle:resource_bundle
+           compatibleWithTraitCollection:nil];
+    return image;
+}
 #pragma mark - Chain Programming.
 + (instancetype)build {
     return [[[self class] alloc] init];

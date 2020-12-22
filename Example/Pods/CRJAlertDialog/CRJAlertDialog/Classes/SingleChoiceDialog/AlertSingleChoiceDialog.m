@@ -1,14 +1,14 @@
 //
-//  CRJSingleChoiceDialog.m
-//  CRJAlertController
+//  AlertSingleChoiceDialog.m
+//  CloudClaim
 //
-//  Created by zhuyuhui on 2020/12/12.
+//  Created by 朱玉辉(EX-ZHUYUHUI001) on 2020/12/14.
+//  Copyright © 2020 朱敏(保险支持团队保险研发组). All rights reserved.
 //
 
-#import "CRJSingleChoiceDialog.h"
+#import "AlertSingleChoiceDialog.h"
 
-@interface CRJSingleChoiceDialog ()<UITableViewDelegate, UITableViewDataSource>
-///tableView
+@interface AlertSingleChoiceDialog ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, assign) NSInteger selectIndex;
@@ -18,15 +18,9 @@
 
 @end
 
-@implementation CRJSingleChoiceDialog
+@implementation AlertSingleChoiceDialog
 static NSString *identifier = @"cell";
-+ (TransitionAnimator *)defaultAnimator {
-    DLAnimationBottom *animator = [[DLAnimationBottom alloc] init];
-    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
-    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
-    animator.contentHeightRatio = 250.f / screenH;
-    return animator;
-}
+
 #pragma mark -
 #pragma mark - clickEvent
 
@@ -36,13 +30,14 @@ static NSString *identifier = @"cell";
 
 - (void)clickConfirm {
     NSMutableArray *items = [NSMutableArray array];
-    if (self.dataSource && self.selectIndex < self.dataSource.count) {
-        [items addObject:[self.dataSource objectAtIndex:self.selectIndex]];
+    id obj = [self.dataSource objectAtIndex:self.selectIndex];
+    if (obj) {
+        [items addObject:obj];
     }
+    
     if (self.delegate && [self.delegate respondsToSelector:@selector(baseDialog:didSelectedItems:)]) {
         [self.delegate baseDialog:self didSelectedItems:items];
     }
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -55,17 +50,15 @@ static NSString *identifier = @"cell";
 }
 
 - (void)setupUI {
-    self.view.backgroundColor = [UIColor whiteColor];
-    
 #pragma mark - 顶部
-    UIView *topBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 40)];
+    UIView *topBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
     [self.view addSubview:topBarView];
     
     
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.textColor = [UIColor blackColor];
     titleLabel.text = @"请选择";
-    titleLabel.font = [UIFont systemFontOfSize:16.0f];
+    titleLabel.font = [UIFont systemFontOfSize:14.0f];
     [topBarView addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.centerY.equalTo(titleLabel.superview);
@@ -78,10 +71,10 @@ static NSString *identifier = @"cell";
     UIButton *cancelBtn = [[UIButton alloc] init];
     [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
     [cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    cancelBtn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+    cancelBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
     [topBarView addSubview:cancelBtn];
     [cancelBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(cancelBtn.superview).offset(15);
+        make.left.equalTo(cancelBtn.superview).offset(12);
         make.centerY.equalTo(cancelBtn.superview);
     }];
     [cancelBtn addTarget:self action:@selector(clickCancel) forControlEvents:UIControlEventTouchUpInside];
@@ -89,27 +82,34 @@ static NSString *identifier = @"cell";
     UIButton *confirmBtn = [[UIButton alloc] init];
     [confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
     [confirmBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    confirmBtn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+    confirmBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
     [topBarView addSubview:confirmBtn];
     [confirmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(confirmBtn.superview).offset(-15);
+        make.right.equalTo(confirmBtn.superview).offset(-12);
         make.centerY.equalTo(confirmBtn.superview);
     }];
     [confirmBtn addTarget:self action:@selector(clickConfirm) forControlEvents:UIControlEventTouchUpInside];
     
-    
+    // 顶部线条
+    UIView *line = [[UIView alloc] init];
+    line.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    [topBarView addSubview:line];
+    [line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.bottom.right.equalTo(line.superview).offset(0);
+        make.height.mas_equalTo(0.5);
+    }];
 #pragma mark - 其他
     CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
     CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
     
     CGFloat contentViewH = screenH * self.animator.contentHeightRatio;
-    CGFloat tableViewH = contentViewH - topBarView.height;
+    CGFloat tableViewH = contentViewH - topBarView.frame.size.height;
 
     self.dataSource = [NSMutableArray array];
 
     // 创建listView
-    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, (tableViewH - self.tableView.rowHeight) / 2)];
-    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, (tableViewH - self.tableView.rowHeight) / 2)];
+    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, (tableViewH - self.tableView.rowHeight) / 2)];
+    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, (tableViewH - self.tableView.rowHeight) / 2)];
 
     self.tableView.tableHeaderView = tableHeaderView;
     self.tableView.tableFooterView = tableFooterView;
@@ -127,9 +127,8 @@ static NSString *identifier = @"cell";
     }];
     
     
-    
     if (!self.cellClass) {
-        self.cellClass = CRJSingleChoiceDialogCell.class;
+        self.cellClass = AlertSingleChoiceDialogCell.class;
     }
     [self.tableView registerClass:self.cellClass forCellReuseIdentifier:identifier];
     
@@ -172,10 +171,10 @@ static NSString *identifier = @"cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if ([cell isKindOfClass:CRJSingleChoiceDialogCell.class]) {
-        ((CRJSingleChoiceDialogCell *)cell).data = [self.dataSource objectAtIndex:indexPath.row];
-        [((CRJSingleChoiceDialogCell *)cell) loadContent];
-        [((CRJSingleChoiceDialogCell *)cell) setCellSelect:indexPath.row == self.selectIndex];
+    if ([cell isKindOfClass:AlertSingleChoiceDialogCell.class]) {
+        ((AlertSingleChoiceDialogCell *)cell).data = [self.dataSource objectAtIndex:indexPath.row];
+        [((AlertSingleChoiceDialogCell *)cell) loadContent];
+        [((AlertSingleChoiceDialogCell *)cell) setCellSelect:indexPath.row == self.selectIndex];
     }
     
     return cell;
@@ -252,14 +251,14 @@ static NSString *identifier = @"cell";
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSArray<UITableViewCell *> *array = [self.tableView visibleCells];
     [array enumerateObjectsUsingBlock:^(UITableViewCell *cell, NSUInteger idx, BOOL *_Nonnull stop) {
-        if ([cell isKindOfClass:CRJSingleChoiceDialogCell.class]) {
+        if ([cell isKindOfClass:AlertSingleChoiceDialogCell.class]) {
             CGRect rect = [cell convertRect:cell.bounds toView:self.centerMarkView];
             CGFloat y = rect.origin.y;
             if (fabs(y) <= self.tableView.rowHeight / 2) {
-                self.selectIndex = [self.dataSource indexOfObject:((CRJSingleChoiceDialogCell *)cell).data];
-                [((CRJSingleChoiceDialogCell *)cell) setCellSelect:YES];
+                self.selectIndex = [self.dataSource indexOfObject:((AlertSingleChoiceDialogCell *)cell).data];
+                [((AlertSingleChoiceDialogCell *)cell) setCellSelect:YES];
             } else {
-                [((CRJSingleChoiceDialogCell *)cell) setCellSelect:NO];
+                [((AlertSingleChoiceDialogCell *)cell) setCellSelect:NO];
             }
         }
     }];
@@ -267,9 +266,8 @@ static NSString *identifier = @"cell";
 
 
 #pragma mark - 懒加载
-- (CRJSingleChoiceDialog *(^)(Class cellClass))withCellClass;
-{
-    return ^ CRJSingleChoiceDialog * (Class cellClass) {
+- (AlertSingleChoiceDialog *(^)(Class cellClass))withCellClass {
+    return ^ AlertSingleChoiceDialog * (Class cellClass) {
         self.cellClass = cellClass;
         return self;
     };

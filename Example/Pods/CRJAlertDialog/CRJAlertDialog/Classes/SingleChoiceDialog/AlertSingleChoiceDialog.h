@@ -6,7 +6,7 @@
 //  Copyright © 2020 朱敏(保险支持团队保险研发组). All rights reserved.
 //
 
-#import "AlertBaseDialog.h"
+#import <CRJAlertDialog/AlertBaseDialog.h>
 #import "AlertSingleChoiceDialogCell.h"
 NS_ASSUME_NONNULL_BEGIN
 

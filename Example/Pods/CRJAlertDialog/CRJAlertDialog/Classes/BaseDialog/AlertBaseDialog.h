@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TransitionAnimator.h"
+#import <CRJTransitionAnimator/CRJTransitionAnimator.h>
+#import <CRJCategories/CRJCategories.h>
+#import <Masonry/Masonry.h>
 NS_ASSUME_NONNULL_BEGIN
 @class AlertBaseDialog;
 
@@ -42,6 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 + (TransitionAnimator *)defaultAnimator;
+- (UIImage *)imageFromCustomBundle:(NSString *)name;
 #pragma mark - Chain Programming.
 
 + (instancetype)build;

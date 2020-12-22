@@ -6,7 +6,7 @@ target 'CRJUIComponents_Example' do
   pod 'CRJUIComponents', :path => '../'
   pod 'Masonry'
   pod 'CRJUtlsScreens'
-  pod 'CRJAlertDialog'
+  pod 'CRJAlertDialog','0.1.1'
   pod 'Toast'
   
 #  pod 'CRJCategories', '0.1.3'

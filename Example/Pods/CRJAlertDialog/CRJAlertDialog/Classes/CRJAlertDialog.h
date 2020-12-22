@@ -8,9 +8,9 @@
 #ifndef CRJAlertDialog_h
 #define CRJAlertDialog_h
 
-#import "CRJAlertBaseDialog.h"
-#import "CRJDateDialog.h"
-#import "CRJSingleChoiceDialog.h"
-#import "CRJMultiChoiceDialog.h"
+#import "AlertBaseDialog.h"
+#import "AlertDateDialog.h"
+#import "AlertSingleChoiceDialog.h"
+#import "AlertMultiChoiceDialog.h"
 
 #endif /* CRJAlertDialog_h */

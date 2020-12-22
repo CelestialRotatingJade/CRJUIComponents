@@ -10,7 +10,7 @@
 #import <CRJAlertDialog/CRJAlertDialog.h>
 #import <CRJTransitionAnimator/CRJTransitionAnimator.h>
 #import <Toast/Toast.h>
-@interface TNTDateItemPickerViewScreen ()<CRJAlertBaseDialogDelegate>
+@interface TNTDateItemPickerViewScreen ()<AlertBaseDialogDelegate>
 
 @end
 
@@ -30,10 +30,10 @@
     }
     
     [self dissMissPresentedViewController:^{
-        CRJAlertBaseDialog *dialog = CRJDateDialog.build.withDelegate(self).withInfo(@"请选择开始日期");
-        [self presentViewController:dialog animation:[DLAnimationBottom new] completion:^{
-            
-        }];
+        AlertDateDialog *dialog = AlertDateDialog.build;
+        dialog.withInfo(@"请选择开始日期").withDelegate(self).prepareFinish();
+        [self presentViewController:dialog
+                          animation:dialog.animator completion:nil];
 
     }];
 }
@@ -74,14 +74,14 @@
 
 
 #pragma mark - CRJAlertBaseDialogDelegate
--(void)baseDialog:(CRJAlertBaseDialog *)dialog didSelectedItems:(NSArray *)items {
+-(void)baseDialog:(AlertBaseDialog *)dialog didSelectedItems:(NSArray *)items {
     if (items) {
         [self.view makeToast:[NSString stringWithFormat:@"%@",items.firstObject]];
     }
 }
 
-- (void)baseDialogWillShow:(CRJAlertBaseDialog *)dialog {
-    if ([dialog isKindOfClass:CRJDateDialog.class]) {
+- (void)baseDialogWillShow:(AlertBaseDialog *)dialog {
+    if ([dialog isKindOfClass:AlertDateDialog.class]) {
         UIDatePicker *picker = dialog.picker;
         if (@available(iOS 13.4, *)) {
             picker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];//新发现这里不会根据系统的语言变了

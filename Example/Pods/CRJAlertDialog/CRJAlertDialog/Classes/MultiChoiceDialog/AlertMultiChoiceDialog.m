@@ -23,13 +23,10 @@ static NSString *identifier = @"cell";
 }
 
 - (void)clickConfirm {
-    kWeak(self);
-    [self dismissViewControllerAnimated:YES completion:^{
-        kStrong(self);
-        if (self.delegate && [self.delegate respondsToSelector:@selector(baseDialog:didSelectedItems:)]) {
-            [self.delegate baseDialog:self didSelectedItems:self.checkedItems];
-        }
-    }];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(baseDialog:didSelectedItems:)]) {
+        [self.delegate baseDialog:self didSelectedItems:self.checkedItems];
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark -
@@ -42,14 +39,14 @@ static NSString *identifier = @"cell";
 
 - (void)setupUI {
 #pragma mark - 顶部
-    UIView *topBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.mj_w, 40)];
+    UIView *topBarView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
     [self.view addSubview:topBarView];
     
     
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.textColor = [UIColor blackColor];
     titleLabel.text = @"请选择";
-    titleLabel.font = [UIFont systemFontOfSize:16.0f];
+    titleLabel.font = [UIFont systemFontOfSize:14.0f];
     [topBarView addSubview:titleLabel];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.centerY.equalTo(titleLabel.superview);
@@ -62,10 +59,10 @@ static NSString *identifier = @"cell";
     UIButton *cancelBtn = [[UIButton alloc] init];
     [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
     [cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    cancelBtn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+    cancelBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
     [topBarView addSubview:cancelBtn];
     [cancelBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(cancelBtn.superview).offset(15);
+        make.left.equalTo(cancelBtn.superview).offset(12);
         make.centerY.equalTo(cancelBtn.superview);
     }];
     [cancelBtn addTarget:self action:@selector(clickCancel) forControlEvents:UIControlEventTouchUpInside];
@@ -73,17 +70,17 @@ static NSString *identifier = @"cell";
     UIButton *confirmBtn = [[UIButton alloc] init];
     [confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
     [confirmBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    confirmBtn.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+    confirmBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
     [topBarView addSubview:confirmBtn];
     [confirmBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(confirmBtn.superview).offset(-15);
+        make.right.equalTo(confirmBtn.superview).offset(-12);
         make.centerY.equalTo(confirmBtn.superview);
     }];
     [confirmBtn addTarget:self action:@selector(clickConfirm) forControlEvents:UIControlEventTouchUpInside];
     
     // 顶部线条
     UIView *line = [[UIView alloc] init];
-    line.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    line.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
     [topBarView addSubview:line];
     [line mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.equalTo(line.superview).offset(0);

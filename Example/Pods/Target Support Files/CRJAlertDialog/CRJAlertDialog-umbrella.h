@@ -11,12 +11,12 @@
 #endif
 
 #import "CRJAlertDialog.h"
-#import "CRJAlertBaseDialog.h"
-#import "CRJDateDialog.h"
-#import "CRJMultiChoiceDialog.h"
-#import "CRJMultiChoiceDialogCell.h"
-#import "CRJSingleChoiceDialog.h"
-#import "CRJSingleChoiceDialogCell.h"
+#import "AlertBaseDialog.h"
+#import "AlertDateDialog.h"
+#import "AlertMultiChoiceDialog.h"
+#import "AlertMultiChoiceDialogCell.h"
+#import "AlertSingleChoiceDialog.h"
+#import "AlertSingleChoiceDialogCell.h"
 
 FOUNDATION_EXPORT double CRJAlertDialogVersionNumber;
 FOUNDATION_EXPORT const unsigned char CRJAlertDialogVersionString[];
