@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SDWebImage/SDWebImage.h>
+#import "SDWebImage/SDWebImage.h"
 @interface CRJPlaceholderImageView : UIView
 /**
  *  Picture's url string.

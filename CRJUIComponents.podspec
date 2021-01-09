@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CRJUIComponents'
-  s.version          = '0.1.401'
+  s.version          = '0.1.402'
   s.summary          = 'A short description of CRJUIComponents.'
 
 # This description is used to generate tags and improve search results.

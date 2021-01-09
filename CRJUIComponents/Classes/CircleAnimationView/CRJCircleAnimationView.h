@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CRJEasing/CRJYXEasing.h>
+#import "CRJEasing/CRJYXEasing.h"
 
 @interface CRJCircleAnimationView : UIView
 /**

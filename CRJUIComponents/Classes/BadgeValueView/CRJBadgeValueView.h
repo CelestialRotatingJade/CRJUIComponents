@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CRJCategories/CRJCategories.h>
+#import "CRJCategories/CRJCategories.h"
 typedef NS_ENUM(NSUInteger, CRJBadgePosition) {
     
     CRJBadgePositionCenterLeft,

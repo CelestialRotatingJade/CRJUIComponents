@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CRJCategories/CRJCategories.h>
+#import "CRJCategories/CRJCategories.h"
 NS_ASSUME_NONNULL_BEGIN
 typedef enum : NSUInteger {
     CRJIconAtLeft,
